@@ -1,0 +1,119 @@
+#home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1d1d1d, #282828);
+    z-index: 0;
+}
+
+.home-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px; 
+    width: 80%;      
+}
+
+.text-container {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 50px 60px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+    max-width: 100%;  
+    margin: 0 auto;
+}
+
+.typewriter-text {
+    font-size: 3rem;
+    color: #007bff;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.cursor {
+    display: inline-block;
+    background-color: #007bff;
+    width: 3px;
+    height: 3rem;
+    margin-left: 3px;
+    animation: blink 0.7s steps(2, start) infinite;
+}
+
+.blink {
+    animation: none;
+}
+
+@keyframes blink {
+    from { background-color: #007bff; }
+    to { background-color: transparent; }
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #f0f2f5;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background 0.3s;
+    font-size: 1.2rem;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Dostosowanie dla mniejszych ekranów */
+@media (max-width: 768px) {
+    .text-container {
+        width: 70%;
+        padding: 40px 30px;
+    }
+
+    .typewriter-text {
+        font-size: 2.5rem;
+        white-space: normal; 
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 8px 20px;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 480px) {
+    .typewriter-text {
+        font-size: 2rem;
+    }
+
+    .btn {
+        width: 100%; 
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
