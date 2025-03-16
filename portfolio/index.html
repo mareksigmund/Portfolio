@@ -10,6 +10,8 @@
     <script src="js/darkmode.js" defer></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="js/animations.js" defer></script>
+    <script src="js/projects.js" defer></script>
+    <link rel="stylesheet" href="css/projects.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -65,7 +67,99 @@
       <section id="projects">
         <div class="particles-wrapper">
           <div class="particles-overlay" id="particles-projects"></div>
-          <div class="section-content">Projekty Section</div>
+          <div class="section-content">
+            <div class="carousel-container">
+              <div class="carousel-wrapper">
+                <div class="project-card">
+                  <h3>Aplikacja Biblioteczna</h3>
+                  <p>
+                    System zarządzania biblioteką z funkcją wyszukiwania i
+                    dodawania książek.
+                  </p>
+                  <div class="technologies">
+                    <span>C#</span>
+                    <span>.NET</span>
+                    <span>WPF</span>
+                  </div>
+                  <a href="biblioteka.html" class="btn">Zobacz więcej</a>
+                </div>
+
+                <div class="project-card">
+                  <h3>Event Manager</h3>
+                  <p>
+                    Aplikacja do zarządzania wydarzeniami z systemem rejestracji
+                    użytkowników.
+                  </p>
+                  <div class="technologies">
+                    <span>ASP.NET Core</span>
+                    <span>Firebase</span>
+                    <span>SQL</span>
+                  </div>
+                  <a href="eventmanager.html" class="btn">Zobacz więcej</a>
+                </div>
+
+                <div class="project-card">
+                  <h3>Portfolio</h3>
+                  <p>
+                    Nowoczesne portfolio z efektem Particle.js, animacjami i
+                    trybem ciemnym.
+                  </p>
+                  <div class="technologies">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                  </div>
+                  <a href="portfolio.html" class="btn">Zobacz więcej</a>
+                </div>
+
+                <div class="project-card">
+                  <h3>System Zamówień</h3>
+                  <p>
+                    Platforma do zarządzania zamówieniami w firmie z opcją
+                    fakturowania.
+                  </p>
+                  <div class="technologies">
+                    <span>PHP</span>
+                    <span>MySQL</span>
+                    <span>Bootstrap</span>
+                  </div>
+                  <a href="ordersystem.html" class="btn">Zobacz więcej</a>
+                </div>
+
+                <div class="project-card">
+                  <h3>Chat Bot AI</h3>
+                  <p>
+                    Interaktywny chatbot oparty na modelach AI do obsługi
+                    klienta.
+                  </p>
+                  <div class="technologies">
+                    <span>Python</span>
+                    <span>Flask</span>
+                    <span>TensorFlow</span>
+                  </div>
+                  <a href="chatbot.html" class="btn">Zobacz więcej</a>
+                </div>
+
+                <div class="project-card">
+                  <h3>System CRM</h3>
+                  <p>
+                    System zarządzania relacjami z klientami z obsługą mailingu.
+                  </p>
+                  <div class="technologies">
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>MongoDB</span>
+                  </div>
+                  <a href="crm.html" class="btn">Zobacz więcej</a>
+                </div>
+              </div>
+
+              <div class="carousel-controls">
+                <button id="prevBtn" class="carousel-btn">❮</button>
+                <button id="nextBtn" class="carousel-btn">❯</button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
