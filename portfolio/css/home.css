@@ -5,38 +5,39 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: var(--text-color);
     text-align: center;
     overflow: hidden;
+    background: var(--particles-bg); /* Dynamiczne tło */
 }
 
 #particles-js {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #1d1d1d, #282828);
+    background: var(--particles-bg);
     z-index: 0;
 }
 
 .home-content {
     position: relative;
     z-index: 1;
-    max-width: 900px; 
-    width: 80%;      
+    max-width: 1000px;
+    width: 80%;
 }
 
 .text-container {
-    background: rgba(0, 0, 0, 0.85);
+    background: var(--container-bg);
     padding: 50px 60px;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
-    max-width: 100%;  
+    max-width: 100%;
     margin: 0 auto;
 }
 
 .typewriter-text {
     font-size: 3rem;
-    color: #007bff;
+    color: var(--primary-color);
     white-space: nowrap;
     overflow: hidden;
     position: relative;
@@ -44,7 +45,7 @@
 
 .cursor {
     display: inline-block;
-    background-color: #007bff;
+    background-color: var(--primary-color);
     width: 3px;
     height: 3rem;
     margin-left: 3px;
@@ -56,20 +57,20 @@
 }
 
 @keyframes blink {
-    from { background-color: #007bff; }
+    from { background-color: var(--primary-color); }
     to { background-color: transparent; }
 }
 
 p {
     font-size: 1.2rem;
     line-height: 1.8;
-    color: #f0f2f5;
+    color: var(--text-color);
 }
 
 .btn {
     display: inline-block;
     padding: 12px 30px;
-    background-color: #007bff;
+    background-color: var(--primary-color);
     color: #fff;
     text-decoration: none;
     border-radius: 30px;
@@ -78,19 +79,19 @@ p {
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: var(--primary-hover);
 }
 
 /* Dostosowanie dla mniejszych ekranów */
 @media (max-width: 768px) {
     .text-container {
-        width: 70%;
+        width: 80%;
         padding: 40px 30px;
     }
 
     .typewriter-text {
         font-size: 2.5rem;
-        white-space: normal; 
+        white-space: normal;
     }
 
     .btn {
@@ -110,10 +111,29 @@ p {
     }
 
     .btn {
-        width: 100%; 
+        width: 100%;
     }
 
     p {
         font-size: 0.9rem;
     }
+}
+
+/* === KOLORY LIGHT / DARK MODE === */
+:root {
+    --bg-color: #f0f2f5;       /* Jasne tło */
+    --particles-bg: #ffffff;    /* Białe tło dla animacji */
+    --text-color: #121212;      /* Ciemny tekst */
+    --container-bg: rgba(255, 255, 255, 0.95); /* Jasne tło dla tekstu */
+    --primary-color: #007bff;   /* Niebieski akcent */
+    --primary-hover: #0056b3;   /* Ciemniejszy niebieski przy hover */
+}
+
+.dark-mode {
+    --bg-color: #121212;        /* Ciemne tło */
+    --particles-bg: #1d1d1d;    /* Ciemniejsze tło dla animacji */
+    --text-color: #f5f5f5;      /* Jasny tekst */
+    --container-bg: rgba(0, 0, 0, 0.85);  /* Ciemne tło dla tekstu */
+    --primary-color: #90caf9;   /* Jaśniejszy niebieski */
+    --primary-hover: #5a9eda;   /* Delikatnie ciemniejszy niebieski przy hover */
 }

@@ -17,5 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
             localStorage.setItem("darkMode", "disabled");
             darkModeToggle.classList.replace("fa-sun", "fa-moon");
         }
+
+        // Dostosowanie animacji do motywu
+        const particlesContainer = document.getElementById("particles-js");
+        particlesContainer.innerHTML = "";  // Resetujemy animację
+        applyParticlesTheme();
     });
 });
