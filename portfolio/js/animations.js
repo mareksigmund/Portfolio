@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-    function loadParticles(theme) {
+    function loadParticles(target, theme) {
         const particlesColor = theme === "dark" ? "#ffffff" : "#121212";
-        
-        particlesJS("particles-js", {
+
+        particlesJS(target, {
             particles: {
                 number: { value: 100, density: { enable: true, value_area: 800 } },
                 color: { value: particlesColor },
@@ -39,17 +39,17 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Obsługa zmiany motywu
-    const darkModeIcon = document.getElementById("darkModeIcon");
-
     function applyParticlesTheme() {
         const theme = document.body.classList.contains("dark-mode") ? "dark" : "light";
-        loadParticles(theme);
+        loadParticles("particles-js", theme);
+        loadParticles("particles-projects", theme);
+        loadParticles("particles-skills", theme);
+        loadParticles("particles-interests", theme);
+        loadParticles("particles-contact", theme);
     }
 
-    darkModeIcon.addEventListener("click", applyParticlesTheme);
+    document.getElementById("darkModeIcon").addEventListener("click", applyParticlesTheme);
 
-    // Pierwsze ładowanie w zależności od zapisanego motywu
     applyParticlesTheme();
 });
 
