@@ -137,3 +137,52 @@ p {
     --primary-color: #90caf9;   /* Jaśniejszy niebieski */
     --primary-hover: #5a9eda;   /* Delikatnie ciemniejszy niebieski przy hover */
 }
+
+
+/* === Tryb ciemny dla sekcji Home === */
+body.dark-mode #home {
+    background-color: var(--dark-bg); /* Ciemne tło */
+    color: #f5f5f5;
+}
+
+/* Dynamiczne tło z particle.js */
+body.dark-mode #particles-js {
+    background: #121212;
+}
+
+/* Kontener z tekstem */
+body.dark-mode .text-container {
+    background: rgba(0, 0, 0, 0.9); /* Ciemniejsze tło dla czytelności */
+    box-shadow: 0 8px 25px rgba(0, 173, 181, 0.5); /* Efekt poświaty */
+    border: 2px solid rgba(0, 173, 181, 0.5); /* Delikatna obwódka */
+    border-radius: 20px;
+}
+
+/* Tekst animacji Typewriter */
+body.dark-mode .typewriter-text {
+    color: #00ADB5; /* Turkusowy akcent */
+}
+
+/* Kursor w animacji Typewriter */
+body.dark-mode .cursor {
+    background-color: #00ADB5;
+}
+
+/* Tekst opisu */
+body.dark-mode p {
+    color: #e0e0e0; /* Delikatniejszy biały */
+}
+
+/* Przycisk */
+body.dark-mode .btn {
+    background-color: #00ADB5;
+    border: 2px solid #00ADB5;
+    color: #fff;
+    box-shadow: 0 0 12px rgba(0, 173, 181, 0.8);
+    transition: background 0.3s, transform 0.2s;
+}
+
+body.dark-mode .btn:hover {
+    background-color: #00CFCF;
+    transform: scale(1.05); /* Subtelne powiększenie na hover */
+}
