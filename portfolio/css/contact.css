@@ -1,1 +1,56 @@
-/* CSS content for contact.css */
+#contact {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.section-title {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--primary-color);
+    color: #FFF;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 173, 181, 0.3);
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+}
+
+.contact-item:hover {
+    background: var(--primary-hover);
+    transform: scale(1.05);
+}
+
+/* Tryb ciemny */
+body.dark-mode .contact-item {
+    background: #00ADB5;
+    box-shadow: 0 4px 12px rgba(0, 173, 181, 0.5);
+}
+
+body.dark-mode .contact-item:hover {
+    background: #00CFCF;
+}
