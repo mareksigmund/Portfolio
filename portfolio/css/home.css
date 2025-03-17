@@ -11,13 +11,13 @@
     background: var(--particles-bg); /* Dynamiczne tło */
 }
 
-#particles-js {
+/* #particles-js {
     position: absolute;
     width: 100%;
     height: 100%;
     background: var(--particles-bg);
     z-index: 0;
-}
+} */
 
 .home-content {
     position: relative;
@@ -146,9 +146,9 @@ body.dark-mode #home {
 }
 
 /* Dynamiczne tło z particle.js */
-body.dark-mode #particles-js {
+/* body.dark-mode #particles-js {
     background: #121212;
-}
+} */
 
 /* Kontener z tekstem */
 body.dark-mode .text-container {
