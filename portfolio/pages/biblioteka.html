@@ -11,11 +11,11 @@
     <div class="theme-toggle" id="theme-toggle">🌞 / 🌙</div>
 
     <section class="project-header">
-      <h1>LibraryWPF</h1>
+      <h1>Library Manager</h1>
       <p>
-        Nowoczesny system zarządzania biblioteką, który łączy intuicyjną obsługę
-        z zaawansowanymi funkcjami wyszukiwania i dodawania książek. Idealne
-        rozwiązanie dla bibliotek każdej wielkości.
+        Kompleksowe narzędzie do zarządzania biblioteką, które zapewnia
+        intuicyjną obsługę, wygodne wyszukiwanie oraz efektywne zarządzanie
+        książkami, rezerwacjami i wypożyczeniami.
       </p>
     </section>
 
@@ -70,44 +70,56 @@
 
     <section class="description">
       <h2>Opis projektu</h2>
-      <p>
-        <strong>LibraryWPF</strong> to aplikacja desktopowa stworzona w
-        technologii WPF, służąca do zarządzania biblioteką. System został
-        zaprojektowany z myślą o trzech głównych rolach użytkowników:
-        Administratorze, Bibliotekarzu i Czytelniku. Każdy z nich posiada
-        dedykowane funkcjonalności, które wspierają zarządzanie zasobami
-        bibliotecznymi oraz procesem wypożyczeń i rezerwacji.
-      </p>
-      <p>
-        Administrator pełni kluczową rolę w zarządzaniu użytkownikami,
-        umożliwiając tworzenie kont Bibliotekarzy i Czytelników, przy czym każda
-        operacja jest odpowiednio potwierdzana komunikatem o sukcesie lub
-        błędzie. Dodatkowo Administrator może monitorować rezerwacje i
-        wypożyczenia oraz generować raporty dotyczące funkcjonowania biblioteki.
-      </p>
-      <p>
-        Bibliotekarz ma dostęp do szeregu narzędzi usprawniających pracę w
-        bibliotece. Dzięki integracji z Google Books API może on szybko dodawać
-        nowe książki do bazy danych, jednocześnie zatwierdzając ich szczegóły.
-        Bibliotekarz zarządza również książkami już obecnymi w systemie,
-        realizuje wypożyczenia oraz przyjmuje zwroty lub oznacza książki jako
-        zgubione. Panel bibliotekarza zawiera także funkcję zarządzania
-        rezerwacjami, umożliwiając akceptowanie lub anulowanie zgłoszeń.
-      </p>
-      <p>
-        Czytelnik może przeglądać dostępne książki, sprawdzać stan swoich
-        wypożyczeń oraz zarządzać rezerwacjami. System powiadamia go o
-        zbliżającym się terminie zwrotu książki oraz informuje, gdy
-        zarezerwowana pozycja jest gotowa do wypożyczenia. W przypadku
-        rezygnacji z rezerwacji, użytkownik może ją w każdej chwili anulować.
-      </p>
-      <p>
-        Aplikacja korzysta z lokalnej bazy danych SQL Server LocalDB oraz
-        integracji z zewnętrznym źródłem danych — Google Books API. Wzorzec
-        projektowy <strong>MVVM</strong> zapewnia przejrzysty podział logiki
-        biznesowej, danych oraz interfejsu użytkownika, co czyni projekt
-        elastycznym i łatwym w rozbudowie.
-      </p>
+
+      <div class="column">
+        <p>
+          <strong>Library Manager</strong> to aplikacja desktopowa stworzona w
+          technologii WPF, służąca do zarządzania biblioteką. System obsługuje
+          trzy główne role: Administratora, Bibliotekarza i Czytelnika. Każdy z
+          nich posiada dedykowane funkcjonalności wspierające zarządzanie
+          zasobami bibliotecznymi oraz procesem wypożyczeń i rezerwacji.
+        </p>
+        <p>
+          Aplikacja wykorzystuje lokalną bazę danych SQL Server LocalDB oraz
+          integrację z zewnętrznym źródłem danych — Google Books API. Wzorzec
+          projektowy
+          <strong>MVVM</strong> zapewnia przejrzysty podział logiki biznesowej,
+          danych oraz interfejsu użytkownika, co czyni projekt elastycznym i
+          łatwym w rozbudowie.
+        </p>
+      </div>
+
+      <div class="roles-container">
+        <div class="column">
+          <h3>Administrator</h3>
+          <p>
+            Administrator pełni kluczową rolę w zarządzaniu użytkownikami,
+            umożliwiając tworzenie kont Bibliotekarzy i Czytelników oraz
+            monitorowanie rezerwacji i wypożyczeń. Administrator może generować
+            raporty dotyczące funkcjonowania biblioteki.
+          </p>
+        </div>
+
+        <div class="column">
+          <h3>Bibliotekarz</h3>
+          <p>
+            Bibliotekarz może dodawać nowe książki do bazy danych za pomocą
+            Google Books API, zarządzać książkami, realizować wypożyczenia oraz
+            przyjmować zwroty. Panel Bibliotekarza zawiera także funkcję
+            zarządzania rezerwacjami.
+          </p>
+        </div>
+
+        <div class="column">
+          <h3>Czytelnik</h3>
+          <p>
+            Czytelnik może przeglądać dostępne książki, sprawdzać stan swoich
+            wypożyczeń oraz zarządzać rezerwacjami. System powiadamia go o
+            zbliżającym się terminie zwrotu oraz informuje, gdy zarezerwowana
+            pozycja jest gotowa do odbioru.
+          </p>
+        </div>
+      </div>
     </section>
 
     <section class="gallery">
