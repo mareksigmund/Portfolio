@@ -401,3 +401,34 @@ body {
 }
 
 
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Aby tło znajdowało się pod treścią */
+    background: var(--bg-gradient); /* Użycie gradientu zgodnego z trybem jasnym/ciemnym */
+}
+
+/* Gradienty dla trybu jasnego i ciemnego */
+:root {
+    --bg-gradient: linear-gradient(135deg, #e0f7fa, #80deea);
+}
+
+.dark-mode {
+    --bg-gradient: linear-gradient(135deg, #121212, #1e1e1e);
+}
+
+
+/* Animacje Scroll Reveal */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px); /* Efekt wysuwania od dołu */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}

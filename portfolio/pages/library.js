@@ -1,5 +1,31 @@
+// Przełączanie motywu
 document.getElementById('theme-toggle').addEventListener('click', function () {
     document.body.classList.toggle('dark-mode');
+
+    // Zmiana koloru cząsteczek przy zmianie trybu
+    const particleColor = document.body.classList.contains('dark-mode') ? "#90caf9" : "#007bff";
+
+    particlesJS("particles-js", {
+        particles: {
+            number: { value: 60 },
+            color: { value: particleColor },
+            shape: { type: "circle" },
+            opacity: { value: 0.15 },
+            size: { value: 3 },
+            move: {
+                enable: true,
+                speed: 1.5,
+                direction: "none",
+                random: true
+            }
+        },
+        interactivity: {
+            events: {
+                onhover: { enable: true, mode: "repulse" },
+                onclick: { enable: true, mode: "push" }
+            }
+        }
+    });
 });
 
 // Galeria zdjęć
@@ -26,7 +52,7 @@ function showImage(index) {
     images.forEach((img, idx) => {
         img.style.display = idx === index ? 'block' : 'none';
         if (idx === index) {
-            imageCaption.innerText = img.getAttribute('alt'); // Dodanie nazwy nad zdjęciem
+            imageCaption.innerText = img.getAttribute('alt');
         }
     });
 }
@@ -55,3 +81,50 @@ closeButton.addEventListener('click', function () {
 
 // Pokaż pierwszy obraz na start
 showImage(currentIndex);
+
+// Efekt cząsteczek na starcie
+particlesJS("particles-js", {
+    particles: {
+        number: { value: 60 },
+        color: { value: "#007bff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.15 },
+        size: { value: 3 },
+        move: {
+            enable: true,
+            speed: 1.5,
+            direction: "none",
+            random: true
+        }
+    },
+    interactivity: {
+        events: {
+            onhover: { enable: true, mode: "repulse" },
+            onclick: { enable: true, mode: "push" }
+        }
+    }
+});
+
+
+// Funkcja do wykrywania elementów na ekranie
+function revealOnScroll() {
+    const elements = document.querySelectorAll('.hidden');
+    const windowHeight = window.innerHeight;
+
+    elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+
+        // Dodanie klasy "show", jeśli element jest widoczny na ekranie
+        if (elementTop < windowHeight - 100) {
+            element.classList.add('show');
+        } else {
+            element.classList.remove('show');
+        }
+    });
+}
+
+// Nasłuchiwanie na zdarzenie przewijania
+window.addEventListener('scroll', revealOnScroll);
+
+// Uruchomienie funkcji na start, aby wykryć już widoczne elementy
+revealOnScroll();

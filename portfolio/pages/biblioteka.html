@@ -6,8 +6,11 @@
     <title>LibraryWPF - Projekt</title>
     <link rel="stylesheet" href="library.css" />
     <script src="library.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   </head>
   <body>
+    <div id="particles-js"></div>
+
     <div class="theme-toggle" id="theme-toggle">🌞 / 🌙</div>
 
     <section class="project-header">
@@ -19,7 +22,7 @@
       </p>
     </section>
 
-    <section class="technologies">
+    <section class="technologies hidden">
       <span>.NET</span>
       <span>WPF</span>
       <span>Entity Framework Core</span>
@@ -28,7 +31,7 @@
       <span>Google Books API</span>
     </section>
 
-    <section class="roles">
+    <section class="roles hidden">
       <div class="role">
         <h3>📚 Bibliotekarz</h3>
         <ul>
@@ -68,7 +71,7 @@
       </div>
     </section>
 
-    <section class="description">
+    <section class="description hidden">
       <h2>Opis projektu</h2>
 
       <div class="column">
@@ -122,43 +125,61 @@
       </div>
     </section>
 
-    <section class="gallery">
+    <section class="gallery hidden">
       <div class="gallery-wrapper">
         <button class="gallery-btn left">❮</button>
         <div class="gallery-content">
-          <img src="img/login.png" alt="Ekran logowania" />
-          <img src="img/panel_administratora.png" alt="Panel Administratora" />
+          <img src="img/libapp/login.png" alt="Ekran logowania" />
           <img
-            src="img/admin_dodanie_bibliotekarza.png"
+            src="img/libapp/panel_administratora.png"
+            alt="Panel Administratora"
+          />
+          <img
+            src="img/libapp/admin_dodanie_bibliotekarza.png"
             alt="Dodanie użytkownika (Bibliotekarz)"
           />
           <img
-            src="img/admin_info_tworzenie_usera.png"
+            src="img/libapp/admin_info_tworzenie_usera.png"
             alt="Potwierdzenie dodania użytkownika"
           />
           <img
-            src="img/bibl_panel_glowny.png"
+            src="img/libapp/bibl_panel_glowny.png"
             alt="Panel główny Bibliotekarza"
           />
           <img
-            src="img/bibl_ksiegarnia.png"
+            src="img/libapp/bibl_ksiegarnia.png"
             alt="Wyszukiwanie książek (Google Books API)"
           />
           <img
-            src="img/bibl_ksiegarnia_potwierdzenie.png"
+            src="img/libapp/bibl_ksiegarnia_potwierdzenie.png"
             alt="Potwierdzenie dodania książki"
           />
           <img
-            src="img/bibl_zarzadzanie_ksiazkami.png"
+            src="img/libapp/bibl_zarzadzanie_ksiazkami.png"
             alt="Zarządzanie książkami"
           />
-          <img src="img/bibl_wypozyczenia.png" alt="Wypożyczanie książek" />
-          <img src="img/bibl_zwrot_ksiazki.png" alt="Zwrot książki" />
-          <img src="img/bibl_rezerwacja.png" alt="Zarządzanie rezerwacjami" />
-          <img src="img/user_panel.png" alt="Panel główny Czytelnika" />
-          <img src="img/user_moje_wypozyczenia.png" alt="Moje wypożyczenia" />
-          <img src="img/user_zarezerwuj.png" alt="Rezerwowanie książki" />
-          <img src="img/user_moje_rezerwacje.png" alt="Moje rezerwacje" />
+          <img
+            src="img/libapp/bibl_wypozyczenia.png"
+            alt="Wypożyczanie książek"
+          />
+          <img src="img/libapp/bibl_zwrot_ksiazki.png" alt="Zwrot książki" />
+          <img
+            src="img/libapp/bibl_rezerwacja.png"
+            alt="Zarządzanie rezerwacjami"
+          />
+          <img src="img/libapp/user_panel.png" alt="Panel główny Czytelnika" />
+          <img
+            src="img/libapp/user_moje_wypozyczenia.png"
+            alt="Moje wypożyczenia"
+          />
+          <img
+            src="img/libapp/user_zarezerwuj.png"
+            alt="Rezerwowanie książki"
+          />
+          <img
+            src="img/libapp/user_moje_rezerwacje.png"
+            alt="Moje rezerwacje"
+          />
         </div>
         <button class="gallery-btn right">❯</button>
       </div>
@@ -166,7 +187,7 @@
 
     <section class="project-future">
       <h2>Rozwój projektu</h2>
-      <div class="future-features">
+      <div class="future-features hidden">
         <div class="feature-card">
           <span>Ulepszenie systemu powiadomień</span>
         </div>
