@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LibraryWPF - Projekt</title>
+    <link rel="stylesheet" href="library.css" />
+    <script src="library.js" defer></script>
+  </head>
+  <body>
+    <div class="theme-toggle" id="theme-toggle">🌞 / 🌙</div>
+
+    <section class="project-header">
+      <h1>LibraryWPF</h1>
+      <p>
+        Nowoczesny system zarządzania biblioteką, który łączy intuicyjną obsługę
+        z zaawansowanymi funkcjami wyszukiwania i dodawania książek. Idealne
+        rozwiązanie dla bibliotek każdej wielkości.
+      </p>
+    </section>
+
+    <section class="technologies">
+      <span>.NET</span>
+      <span>WPF</span>
+      <span>Entity Framework Core</span>
+      <span>SQL Server LocalDB</span>
+      <span>MVVM</span>
+      <span>Google Books API</span>
+    </section>
+
+    <section class="roles">
+      <div class="role">
+        <h3>📚 Bibliotekarz</h3>
+        <ul>
+          <li>Dashboard z szybkim dostępem do kluczowych funkcji</li>
+          <li>Dodawanie książek do biblioteki poprzez Google Books API</li>
+          <li>Zarządzanie książkami (edycja danych i zmiana statusu)</li>
+          <li>
+            Wypożyczanie książek z wyborem użytkownika i daty zakończenia
+            wypożyczenia
+          </li>
+          <li>Zwrot książek lub oznaczenie ich jako zgubione</li>
+          <li>
+            Zarządzanie rezerwacjami (potwierdzanie lub usuwanie rezerwacji)
+          </li>
+        </ul>
+      </div>
+      <div class="role">
+        <h3>👨‍🎓 Czytelnik</h3>
+        <ul>
+          <li>Przeglądanie dostępnych książek</li>
+          <li>Przeglądanie swoich wypożyczeń</li>
+          <li>Otrzymywanie powiadomień o zbliżającym się terminie zwrotu</li>
+          <li>Rezerwowanie książek z systemem kolejki</li>
+          <li>Monitorowanie statusu swoich rezerwacji</li>
+          <li>Możliwość rezygnacji z rezerwacji</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <h3>🔒 Administrator</h3>
+        <ul>
+          <li>Logowanie jako administrator z domyślnym kontem</li>
+          <li>Dodawanie nowych użytkowników (Bibliotekarz, Czytelnik)</li>
+          <li>Wylogowywanie z panelu do ekranu logowania</li>
+          <li>Potwierdzenia powodzenia lub niepowodzenia operacji</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="description">
+      <h2>Opis projektu</h2>
+      <p>
+        <strong>LibraryWPF</strong> to aplikacja desktopowa stworzona w
+        technologii WPF, służąca do zarządzania biblioteką. System został
+        zaprojektowany z myślą o trzech głównych rolach użytkowników:
+        Administratorze, Bibliotekarzu i Czytelniku. Każdy z nich posiada
+        dedykowane funkcjonalności, które wspierają zarządzanie zasobami
+        bibliotecznymi oraz procesem wypożyczeń i rezerwacji.
+      </p>
+      <p>
+        Administrator pełni kluczową rolę w zarządzaniu użytkownikami,
+        umożliwiając tworzenie kont Bibliotekarzy i Czytelników, przy czym każda
+        operacja jest odpowiednio potwierdzana komunikatem o sukcesie lub
+        błędzie. Dodatkowo Administrator może monitorować rezerwacje i
+        wypożyczenia oraz generować raporty dotyczące funkcjonowania biblioteki.
+      </p>
+      <p>
+        Bibliotekarz ma dostęp do szeregu narzędzi usprawniających pracę w
+        bibliotece. Dzięki integracji z Google Books API może on szybko dodawać
+        nowe książki do bazy danych, jednocześnie zatwierdzając ich szczegóły.
+        Bibliotekarz zarządza również książkami już obecnymi w systemie,
+        realizuje wypożyczenia oraz przyjmuje zwroty lub oznacza książki jako
+        zgubione. Panel bibliotekarza zawiera także funkcję zarządzania
+        rezerwacjami, umożliwiając akceptowanie lub anulowanie zgłoszeń.
+      </p>
+      <p>
+        Czytelnik może przeglądać dostępne książki, sprawdzać stan swoich
+        wypożyczeń oraz zarządzać rezerwacjami. System powiadamia go o
+        zbliżającym się terminie zwrotu książki oraz informuje, gdy
+        zarezerwowana pozycja jest gotowa do wypożyczenia. W przypadku
+        rezygnacji z rezerwacji, użytkownik może ją w każdej chwili anulować.
+      </p>
+      <p>
+        Aplikacja korzysta z lokalnej bazy danych SQL Server LocalDB oraz
+        integracji z zewnętrznym źródłem danych — Google Books API. Wzorzec
+        projektowy <strong>MVVM</strong> zapewnia przejrzysty podział logiki
+        biznesowej, danych oraz interfejsu użytkownika, co czyni projekt
+        elastycznym i łatwym w rozbudowie.
+      </p>
+    </section>
+
+    <section class="gallery">
+      <div class="gallery-wrapper">
+        <button class="gallery-btn left">❮</button>
+        <div class="gallery-content">
+          <img src="img/login.png" alt="Ekran logowania" />
+          <img src="img/panel_administratora.png" alt="Panel Administratora" />
+          <img
+            src="img/admin_dodanie_bibliotekarza.png"
+            alt="Dodanie użytkownika (Bibliotekarz)"
+          />
+          <img
+            src="img/admin_info_tworzenie_usera.png"
+            alt="Potwierdzenie dodania użytkownika"
+          />
+          <img
+            src="img/bibl_panel_glowny.png"
+            alt="Panel główny Bibliotekarza"
+          />
+          <img
+            src="img/bibl_ksiegarnia.png"
+            alt="Wyszukiwanie książek (Google Books API)"
+          />
+          <img
+            src="img/bibl_ksiegarnia_potwierdzenie.png"
+            alt="Potwierdzenie dodania książki"
+          />
+          <img
+            src="img/bibl_zarzadzanie_ksiazkami.png"
+            alt="Zarządzanie książkami"
+          />
+          <img src="img/bibl_wypozyczenia.png" alt="Wypożyczanie książek" />
+          <img src="img/bibl_zwrot_ksiazki.png" alt="Zwrot książki" />
+          <img src="img/bibl_rezerwacja.png" alt="Zarządzanie rezerwacjami" />
+          <img src="img/user_panel.png" alt="Panel główny Czytelnika" />
+          <img src="img/user_moje_wypozyczenia.png" alt="Moje wypożyczenia" />
+          <img src="img/user_zarezerwuj.png" alt="Rezerwowanie książki" />
+          <img src="img/user_moje_rezerwacje.png" alt="Moje rezerwacje" />
+        </div>
+        <button class="gallery-btn right">❯</button>
+      </div>
+    </section>
+
+    <section class="project-future">
+      <h2>Rozwój projektu</h2>
+      <div class="future-features">
+        <div class="feature-card">
+          <span>Ulepszenie systemu powiadomień</span>
+        </div>
+        <div class="feature-card">
+          <span>Usprawnienie panelu administratora</span>
+        </div>
+        <div class="feature-card">
+          <span>Raporty i statystyki</span>
+        </div>
+        <div class="feature-card">
+          <span>Kategoryzacja książek</span>
+        </div>
+        <div class="feature-card">
+          <span>Ulepszenie interfejsu użytkownika (UI)</span>
+        </div>
+      </div>
+      <a href="https://github.com/TWOJE_REPO" target="_blank" class="btn">
+        🔗 Zobacz na GitHub
+      </a>
+    </section>
+  </body>
+</html>
