@@ -84,3 +84,46 @@ body.dark-mode .interest-item h3,
 body.dark-mode .interest-item p {
     color: #E0E0E0;
 }
+
+.interest-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Odstępy między kartami */
+    justify-content: center; /* Wyśrodkowanie kart */
+}
+
+.interest-item {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 280px; /* Stała szerokość dla spójności */
+    height: 280px; /* Ustawienie jednakowej wysokości */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /* Równomierne rozmieszczenie treści */
+    transition: transform 0.3s ease-in-out;
+}
+
+.interest-item:hover {
+    transform: translateY(-5px); /* Efekt unoszenia przy najechaniu */
+}
+
+.interest-item i {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 40px;
+}
+
+.interest-item p {
+    color: #555;
+    line-height: 1.6;
+}

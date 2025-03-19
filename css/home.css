@@ -186,3 +186,18 @@ body.dark-mode .btn:hover {
     background-color: #00CFCF;
     transform: scale(1.05); /* Subtelne powiększenie na hover */
 }
+
+/* Ukrycie paska przewijania w Chrome, Safari i nowoczesnych przeglądarkach */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Ukrycie paska przewijania w Firefox */
+html {
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Ukrycie paska przewijania w IE i Edge */
+body {
+    -ms-overflow-style: none; /* IE i Edge */
+}

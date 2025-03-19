@@ -414,31 +414,56 @@ body {
     display: flex;
     align-items: center;
     position: relative;
-    max-width: 800px;
+    max-width: 90%; /* Ograniczenie szerokości */
     margin: 0 auto;
     overflow: hidden;
-    height: 500px; /* Zwiększenie wysokości galerii */
+    height: auto; /* Dostosowanie wysokości */
+    border: 3px solid var(--primary-color); /* Ramka */
+    border-radius: 15px; /* Zaokrąglenie rogów */
 }
 
 .gallery-content {
     display: flex;
+    gap: 15px;
     transition: transform 0.5s ease;
-    width: 100%;
+    width: 100%; /* Dopasowanie szerokości */
 }
 
 .gallery-content img {
-    width: 100%;  /* Jeden pełny obraz na widoku */
-    height: 100%;  /* Pełna wysokość */
-    object-fit: contain;  /* Zapobieganie rozciąganiu obrazu */
-    border-radius: 15px;
-    border: 3px solid var(--primary-color);
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;  /* Skalowanie zdjęć */
+    max-height: 450px; /* Ograniczenie maksymalnej wysokości */
+    object-fit: contain; /* Zapobieganie rozciąganiu */
+    border-radius: 10px;
+    border: 3px solid var(--primary-color); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.gallery-content img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+/* Przycisk nawigacyjny - Poprawa pozycji */
+.gallery-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 12px 18px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s;
+}
+
+.gallery-btn.left {
+    left: -50px; /* Przesunięcie przycisku na lewo */
+}
+
+.gallery-btn.right {
+    right: -50px; /* Przesunięcie przycisku na prawo */
+}
+
+.gallery-btn:hover {
+    background: var(--secondary-color);
 }
 
 /* Dynamiczny napis nad obrazem */
@@ -620,5 +645,26 @@ body {
     font-weight: bold;
 }
 
+
+
+.roles ul {
+    list-style: none; /* Usunięcie standardowych kropek */
+    padding-left: 0;  /* Usunięcie domyślnego wcięcia */
+}
+
+.roles ul li {
+    position: relative;
+    padding-left: 24px; /* Odsunięcie tekstu od ikonki */
+    margin-bottom: 8px; /* Dodanie odstępów między elementami */
+}
+
+.roles ul li::before {
+    content: "✔️";  /* Ikonka zamiast kropek */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 18px; /* Dostosowanie rozmiaru ikonki */
+    color: #4CAF50;  /* Kolor ikonki (zielony - sukces) */
+}
 
 

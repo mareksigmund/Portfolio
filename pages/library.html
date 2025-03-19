@@ -3,12 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="LibraryWPF - Projekt zarządzania biblioteką w WPF"
+    />
+    <meta name="author" content="Marek - Programista i Student IT/AI" />
+    <meta name="robots" content="index, follow" />
+
     <title>LibraryWPF - Projekt</title>
+
+    <!-- Style CSS -->
     <link rel="stylesheet" href="library.css" />
+
+    <!-- Skrypty -->
     <script src="library.js" defer></script>
     <script src="menu-loader.js" defer></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- Ikony (opcjonalnie, jeśli potrzebujesz) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
   </head>
+
   <body>
     <div id="particles-js"></div>
 
@@ -17,9 +35,9 @@
     <section class="project-header">
       <h1>Library Manager</h1>
       <p>
-        Kompleksowe narzędzie do zarządzania biblioteką, które zapewnia
-        intuicyjną obsługę, wygodne wyszukiwanie oraz efektywne zarządzanie
-        książkami, rezerwacjami i wypożyczeniami.
+        Narzędzie do zarządzania biblioteką, które zapewnia intuicyjną obsługę,
+        wygodne wyszukiwanie oraz efektywne zarządzanie książkami, rezerwacjami
+        i wypożyczeniami.
       </p>
     </section>
 
@@ -27,7 +45,7 @@
       <span>.NET</span>
       <span>WPF</span>
       <span>Entity Framework Core</span>
-      <span>SQL Server LocalDB</span>
+      <span>SQL Server</span>
       <span>MVVM</span>
       <span>Google Books API</span>
     </section>
@@ -39,10 +57,7 @@
           <li>Dashboard z szybkim dostępem do kluczowych funkcji</li>
           <li>Dodawanie książek do biblioteki poprzez Google Books API</li>
           <li>Zarządzanie książkami (edycja danych i zmiana statusu)</li>
-          <li>
-            Wypożyczanie książek z wyborem użytkownika i daty zakończenia
-            wypożyczenia
-          </li>
+          <li>Wypożyczanie książek</li>
           <li>Zwrot książek lub oznaczenie ich jako zgubione</li>
           <li>
             Zarządzanie rezerwacjami (potwierdzanie lub usuwanie rezerwacji)
@@ -66,8 +81,6 @@
         <ul>
           <li>Logowanie jako administrator z domyślnym kontem</li>
           <li>Dodawanie nowych użytkowników (Bibliotekarz, Czytelnik)</li>
-          <li>Wylogowywanie z panelu do ekranu logowania</li>
-          <li>Potwierdzenia powodzenia lub niepowodzenia operacji</li>
         </ul>
       </div>
     </section>
@@ -86,10 +99,9 @@
         <p>
           Aplikacja wykorzystuje lokalną bazę danych SQL Server LocalDB oraz
           integrację z zewnętrznym źródłem danych — Google Books API. Wzorzec
-          projektowy
-          <strong>MVVM</strong> zapewnia przejrzysty podział logiki biznesowej,
-          danych oraz interfejsu użytkownika, co czyni projekt elastycznym i
-          łatwym w rozbudowie.
+          projektowy MVVM zapewnia przejrzysty podział logiki biznesowej, danych
+          oraz interfejsu użytkownika, co czyni projekt elastycznym i łatwym w
+          rozbudowie.
         </p>
       </div>
 
@@ -99,8 +111,8 @@
           <p>
             Administrator pełni kluczową rolę w zarządzaniu użytkownikami,
             umożliwiając tworzenie kont Bibliotekarzy i Czytelników oraz
-            monitorowanie rezerwacji i wypożyczeń. Administrator może generować
-            raporty dotyczące funkcjonowania biblioteki.
+            monitorowanie rezerwacji i wypożyczeń. Administrator będzie również
+            mógł generować raporty dotyczące funkcjonowania biblioteki.
           </p>
         </div>
 
@@ -139,10 +151,10 @@
             src="img/libapp/admin_dodanie_bibliotekarza.png"
             alt="Dodanie użytkownika (Bibliotekarz)"
           />
-          <img
+          <!-- <img
             src="img/libapp/admin_info_tworzenie_usera.png"
             alt="Potwierdzenie dodania użytkownika"
-          />
+          /> -->
           <img
             src="img/libapp/bibl_panel_glowny.png"
             alt="Panel główny Bibliotekarza"
@@ -193,7 +205,7 @@
           <span>Ulepszenie systemu powiadomień</span>
         </div>
         <div class="feature-card">
-          <span>Usprawnienie panelu administratora</span>
+          <span>Rozwój panelu administratora</span>
         </div>
         <div class="feature-card">
           <span>Raporty i statystyki</span>
@@ -205,7 +217,11 @@
           <span>Ulepszenie interfejsu użytkownika (UI)</span>
         </div>
       </div>
-      <a href="https://github.com/TWOJE_REPO" target="_blank" class="btn">
+      <a
+        href="https://github.com/mareksigmund/Projekty/tree/main/LibraryWPF"
+        target="_blank"
+        class="btn"
+      >
         🔗 Zobacz na GitHub
       </a>
     </section>

@@ -3,23 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio programisty – Projekty, umiejętności, zainteresowania i kontakt."
+    />
+    <meta name="author" content="Marek - Programista i Student IT/AI" />
+    <meta
+      name="keywords"
+      content="Programowanie, Portfolio, Projekty, IT, AI, Web Development"
+    />
+    <meta name="robots" content="index, follow" />
+
     <title>Portfolio</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+
+    <!-- Główne style CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/home.css" />
-    <script src="js/main.js" defer></script>
-    <script src="js/darkmode.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="js/animations.js" defer></script>
-    <script src="js/projects.js" defer></script>
     <link rel="stylesheet" href="css/projects.css" />
     <link rel="stylesheet" href="css/skills.css" />
     <link rel="stylesheet" href="css/interests.css" />
     <link rel="stylesheet" href="css/contact.css" />
+
+    <!-- Zewnętrzne biblioteki -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+
+    <!-- Preconnect dla szybszego ładowania -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+
+    <!-- Skrypty -->
+    <script
+      src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"
+      defer
+    ></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/darkmode.js" defer></script>
+    <script src="js/animations.js" defer></script>
+    <script src="js/projects.js" defer></script>
   </head>
+
   <body>
     <div class="theme-toggle">
       <i class="fas fa-moon" id="darkModeIcon"></i>
@@ -57,7 +86,7 @@
               <span id="typewriter"></span><span class="cursor"></span>
             </h1>
             <p>
-              Jestem studentem z branży IT i AI i chcę rozwijać się w różnych
+              Jestem studentem z branży IT i AI chcę rozwijać się w różnych
               obszarach technologii. Specjalizuję się w tworzeniu aplikacji
               internetowych, ale interesuję się także sztuczną inteligencją,
               uczeniem maszynowym i pracą z danymi.
@@ -86,52 +115,70 @@
                     <span>...</span>
                   </div>
 
-                  <a href="pages/biblioteka.html" class="btn">Zobacz więcej</a>
+                  <a href="pages/library.html" class="btn">Zobacz więcej</a>
                 </div>
 
                 <div class="project-card">
                   <h3>Event Manager</h3>
                   <p>
-                    Aplikacja do zarządzania wydarzeniami z systemem rejestracji
-                    użytkowników.
+                    Aplikacja do zarządzania wydarzeniami z możliwością
+                    rejestracji, edycji i zarządzania uczestnikami.
                   </p>
-                  <a href="eventmanager.html" class="btn">Zobacz więcej</a>
+                  <div class="project-key-technologies">
+                    <span>ASP.NET Core</span>
+                    <span>Entity Framework Core</span>
+                    <span>MVC</span>
+                    <span>...</span>
+                  </div>
+                  <a href="pages/eventmanager.html" class="btn"
+                    >Zobacz więcej</a
+                  >
                 </div>
 
                 <div class="project-card">
-                  <h3>Portfolio</h3>
+                  <h3>Restaurant Manager</h3>
                   <p>
-                    Nowoczesne portfolio z efektem Particle.js, animacjami i
-                    trybem ciemnym.
+                    Aplikacja do zarządzania restauracją z systemem rezerwacji,
+                    ocen i zarządzania menu.
                   </p>
-                  <a href="portfolio.html" class="btn">Zobacz więcej</a>
+                  <div class="project-key-technologies">
+                    <span>Node.js</span>
+                    <span>MongoDB</span>
+                    <span>Angular</span>
+                    <span>...</span>
+                  </div>
+                  <a href="pages/restaurant.html" class="btn">Zobacz więcej</a>
                 </div>
 
                 <div class="project-card">
-                  <h3>System Zamówień</h3>
+                  <h3>Image Classifier</h3>
                   <p>
-                    System wspierający zarządzanie zamówieniami w firmach i
-                    sklepach.
+                    Aplikacja oparta na modelu MobileNet, służąca do
+                    klasyfikacji zdjęć roślin i zwierząt.
                   </p>
-                  <a href="ordersystem.html" class="btn">Zobacz więcej</a>
+                  <div class="project-key-technologies">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>PHP</span>
+                    <span>...</span>
+                  </div>
+                  <a href="#" class="btn">Wkrótce dostępne</a>
                 </div>
 
                 <div class="project-card">
-                  <h3>Chat Bot AI</h3>
+                  <h3>Task Manager</h3>
                   <p>
-                    Inteligentny chatbot do automatyzacji obsługi klienta i
-                    odpowiedzi na pytania.
+                    Aplikacja do zarządzania zadaniami z funkcjami planowania,
+                    priorytetyzacji i śledzenia postępów.
                   </p>
-                  <a href="chatbot.html" class="btn">Zobacz więcej</a>
-                </div>
-
-                <div class="project-card">
-                  <h3>System CRM</h3>
-                  <p>
-                    System zarządzania relacjami z klientami dla firm i
-                    przedsiębiorstw.
-                  </p>
-                  <a href="crm.html" class="btn">Zobacz więcej</a>
+                  <div class="project-key-technologies">
+                    <span>.NET</span>
+                    <span>Firebase</span>
+                    <span>Angular</span>
+                    <span>...</span>
+                  </div>
+                  <a href="#" class="btn">Wkrótce dostępne</a>
                 </div>
               </div>
 
@@ -143,18 +190,14 @@
 
             <!-- Małe ekrany - kafelki/guziki -->
             <div class="tile-container small-screen">
-              <a href="biblioteka.html" class="project-tile"
+              <a href="pages/library.html" class="project-tile"
                 >📚 Aplikacja Biblioteczna</a
               >
-              <a href="eventmanager.html" class="project-tile"
+              <a href="pages/eventmanager.html" class="project-tile"
                 >📅 Event Manager</a
               >
-              <a href="portfolio.html" class="project-tile">💻 Portfolio</a>
-              <a href="ordersystem.html" class="project-tile"
-                >🛒 System Zamówień</a
-              >
-              <a href="chatbot.html" class="project-tile">🤖 Chat Bot AI</a>
-              <a href="crm.html" class="project-tile">👥 System CRM</a>
+              <a href="#" class="project-tile">🌿 Image Classifier (Wkrótce)</a>
+              <a href="#" class="project-tile">✅ Task Manager (Wkrótce)</a>
             </div>
           </div>
         </div>
@@ -180,26 +223,41 @@
               <div class="skills-box">
                 <h3>💻 Główne technologie i języki</h3>
                 <div class="tech-list">
-                  <span>HTML5</span>
-                  <span>CSS3</span>
+                  <span>HTML</span>
+                  <span>CSS</span>
                   <span>JavaScript</span>
+                  <span>Node.js</span>
+                  <span>MongoDB</span>
                   <span>C#</span>
                   <span>.NET</span>
-                  <span>SQL</span>
-                  <span>Firebase</span>
+                  <span>MVC</span>
+                  <span>MVVM</span>
+                  <span>SOA</span>
+                  <span>Bootstrap</span>
+                  <span>Visual Studio</span>
+                  <span>VS Code</span>
                 </div>
               </div>
-
               <div class="skills-box">
                 <h3>🛠️ Technologie i języki, z którymi miałem do czynienia</h3>
                 <div class="tech-list">
-                  <span>Python</span>
-                  <span>MongoDB</span>
-                  <span>React</span>
-                  <span>Bootstrap</span>
-                  <span>Node.js</span>
-                  <span>Express.js</span>
                   <span>ASP.NET Core</span>
+                  <span>Entity Framework Core</span>
+                  <span>Firebase</span>
+                  <span>PHP</span>
+                  <span>WPF</span>
+                  <span>React</span>
+                  <span>jQuery</span>
+                  <span>REST API</span>
+                  <span>C</span>
+                  <span>C++</span>
+                  <span>Java</span>
+                  <span>Python</span>
+                  <span>SQL</span>
+                  <span>R</span>
+                  <span>Swagger</span>
+                  <span>Git</span>
+                  <span>Android Studio</span>
                 </div>
               </div>
             </div>
@@ -265,22 +323,22 @@
 
             <div class="contact-links">
               <a
-                href="https://www.linkedin.com/in/twoj-profil"
+                href="https://www.linkedin.com/in/marek-sigmund-235164357"
                 target="_blank"
                 class="contact-item"
               >
                 <i class="fab fa-linkedin"></i> LinkedIn
               </a>
               <a
-                href="https://github.com/twoj-nick"
+                href="https://github.com/mareksigmund/Projekty"
                 target="_blank"
                 class="contact-item"
               >
                 <i class="fab fa-github"></i> GitHub
               </a>
-              <a href="mailto:twojemail@example.com" class="contact-item">
+              <!-- <a href="mailto:twojemail@example.com" class="contact-item">
                 <i class="fas fa-envelope"></i> Email
-              </a>
+              </a> -->
               <a href="assets/CV_Marek.pdf" download class="contact-item">
                 <i class="fas fa-file-download"></i> Pobierz CV
               </a>
