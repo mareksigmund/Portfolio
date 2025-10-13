@@ -3,349 +3,221 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Portfolio programisty – Projekty, umiejętności, zainteresowania i kontakt."
+    <title>Marek – Web Developer</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
     />
-    <meta name="author" content="Marek - Programista i Student IT/AI" />
-    <meta
-      name="keywords"
-      content="Programowanie, Portfolio, Projekty, IT, AI, Web Development"
-    />
-    <meta name="robots" content="index, follow" />
-
-    <title>Portfolio</title>
-
-    <!-- Favicon -->
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
-
-    <!-- Główne style CSS -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/home.css" />
-    <link rel="stylesheet" href="css/projects.css" />
-    <link rel="stylesheet" href="css/skills.css" />
-    <link rel="stylesheet" href="css/interests.css" />
-    <link rel="stylesheet" href="css/contact.css" />
-
-    <!-- Zewnętrzne biblioteki -->
+    <link rel="stylesheet" href="assets/css/style.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-
-    <!-- Preconnect dla szybszego ładowania -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-
-    <!-- Skrypty -->
-    <script
-      src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"
-      defer
-    ></script>
-    <script src="js/main.js" defer></script>
-    <script src="js/darkmode.js" defer></script>
-    <script src="js/animations.js" defer></script>
-    <script src="js/projects.js" defer></script>
   </head>
-
   <body>
-    <div class="theme-toggle">
-      <i class="fas fa-moon" id="darkModeIcon"></i>
-    </div>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1>Cześć! Jestem Marek</h1>
+        <p>Web Developer | Programmer | AI & Data Science</p>
+        <div class="cta">
+          <a href="#projects" class="btn">Zobacz projekty</a>
+          <a href="assets/cv/CV_Marek.pdf" class="btn outline" target="_blank"
+            >Pobierz CV</a
+          >
+        </div>
+      </div>
+    </section>
 
-    <div class="sidebar">
-      <div class="nav-item active" data-target="home">
-        <i class="fas fa-house"></i>
-        <span class="tooltip">Home</span>
-      </div>
-      <div class="nav-item" data-target="projects">
-        <i class="fas fa-laptop-code"></i>
-        <span class="tooltip">Projekty</span>
-      </div>
-      <div class="nav-item" data-target="skills">
-        <i class="fas fa-code"></i>
-        <span class="tooltip">Umiejętności</span>
-      </div>
-      <div class="nav-item" data-target="interests">
-        <i class="fas fa-gamepad"></i>
-        <span class="tooltip">Zainteresowania</span>
-      </div>
-      <div class="nav-item" data-target="contact">
-        <i class="fas fa-envelope"></i>
-        <span class="tooltip">Kontakt</span>
-      </div>
-    </div>
-
-    <div class="content">
-      <section id="home">
-        <div id="particles-js"></div>
-        <div class="home-content">
-          <div class="text-container">
-            <h1 class="typewriter-text">
-              <span id="typewriter"></span><span class="cursor"></span>
-            </h1>
+    <!-- O mnie -->
+    <section class="about-cards">
+      <div class="container">
+        <div class="about-card-grid">
+          <div class="about-card">
+            <i class="fas fa-user-graduate"></i>
+            <h3>Kim jestem</h3>
             <p>
-              Jestem studentem z branży IT i AI chcę rozwijać się w różnych
-              obszarach technologii. Specjalizuję się w tworzeniu aplikacji
-              internetowych, ale interesuję się także sztuczną inteligencją,
-              uczeniem maszynowym i pracą z danymi.
+              Jestem web developerem z wykształceniem inżynierskim i (prawie)
+              magisterskim w AI & Data Science. Programowanie jest moją pasją, a
+              największą satysfakcję sprawia mi tworzenie aplikacji i rozwiązań
+              webowych. Swoje umiejętności rozwijam zarówno w projektach
+              akademickich, jak i prywatnych, chętnie poznając nowe technologie
+              i podejścia dobierając je elastycznie do potrzeb każdego projektu.
             </p>
-            <a href="#projects" class="btn">Zobacz moje projekty</a>
           </div>
-        </div>
-      </section>
-      <section id="projects">
-        <div class="particles-wrapper">
-          <div class="particles-overlay" id="particles-projects"></div>
-          <div class="section-content">
-            <!-- Duże ekrany - klasyczne karty -->
-            <div class="carousel-container large-screen">
-              <div class="carousel-wrapper">
-                <div class="project-card hidden">
-                  <h3>Aplikacja Biblioteczna</h3>
-                  <p>
-                    System zarządzania biblioteką z funkcją wyszukiwania i
-                    dodawania książek.
-                  </p>
-                  <div class="project-key-technologies">
-                    <span>WPF</span>
-                    <span>.NET</span>
-                    <span>MVVM</span>
-                    <span>...</span>
-                  </div>
-
-                  <a href="pages/library.html" class="btn">Zobacz więcej</a>
-                </div>
-
-                <div class="project-card">
-                  <h3>Event Manager</h3>
-                  <p>
-                    Aplikacja do zarządzania wydarzeniami z możliwością
-                    rejestracji, edycji i zarządzania uczestnikami.
-                  </p>
-                  <div class="project-key-technologies">
-                    <span>ASP.NET Core</span>
-                    <span>Entity Framework Core</span>
-                    <span>MVC</span>
-                    <span>...</span>
-                  </div>
-                  <a href="pages/eventmanager.html" class="btn"
-                    >Zobacz więcej</a
-                  >
-                </div>
-
-                <div class="project-card">
-                  <h3>Restaurant Manager</h3>
-                  <p>
-                    Aplikacja do zarządzania restauracją z systemem rezerwacji,
-                    ocen i zarządzania menu.
-                  </p>
-                  <div class="project-key-technologies">
-                    <span>Node.js</span>
-                    <span>MongoDB</span>
-                    <span>Angular</span>
-                    <span>...</span>
-                  </div>
-                  <a href="pages/restaurant.html" class="btn">Zobacz więcej</a>
-                </div>
-
-                <div class="project-card">
-                  <h3>Image Classifier</h3>
-                  <p>
-                    Aplikacja oparta na modelu MobileNet, służąca do
-                    klasyfikacji zdjęć roślin i zwierząt.
-                  </p>
-                  <div class="project-key-technologies">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>PHP</span>
-                    <span>...</span>
-                  </div>
-                  <a href="#" class="btn">Wkrótce dostępne</a>
-                </div>
-
-                <div class="project-card">
-                  <h3>Task Manager</h3>
-                  <p>
-                    Aplikacja do zarządzania zadaniami z funkcjami planowania,
-                    priorytetyzacji i śledzenia postępów.
-                  </p>
-                  <div class="project-key-technologies">
-                    <span>.NET</span>
-                    <span>Firebase</span>
-                    <span>Angular</span>
-                    <span>...</span>
-                  </div>
-                  <a href="#" class="btn">Wkrótce dostępne</a>
-                </div>
-              </div>
-
-              <div class="carousel-controls">
-                <button id="prevBtn" class="carousel-btn">❮</button>
-                <button id="nextBtn" class="carousel-btn">❯</button>
-              </div>
-            </div>
-
-            <!-- Małe ekrany - kafelki/guziki -->
-            <div class="tile-container small-screen">
-              <a href="pages/library.html" class="project-tile"
-                >📚 Aplikacja Biblioteczna</a
-              >
-              <a href="pages/eventmanager.html" class="project-tile"
-                >📅 Event Manager</a
-              >
-              <a href="#" class="project-tile">🌿 Image Classifier (Wkrótce)</a>
-              <a href="#" class="project-tile">✅ Task Manager (Wkrótce)</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="skills">
-        <div class="particles-wrapper">
-          <div class="particles-overlay" id="particles-skills"></div>
-          <div class="section-content">
-            <div class="skills-flex">
-              <div class="skills-box">
-                <h3>🧠 Umiejętności</h3>
-                <ul class="skills-list">
-                  <li>Tworzenie aplikacji internetowych</li>
-                  <li>Projektowanie i rozwój API</li>
-                  <li>Umiejętność pracy z bazami SQL i NoSQL</li>
-                  <li>Znajomość podstawowych wzorców projektowych</li>
-                  <li>Umiejętność pracy w zespole</li>
-                  <li>Umiejętność szybkiego uczenia się</li>
-                </ul>
-              </div>
-
-              <div class="skills-box">
-                <h3>💻 Główne technologie i języki</h3>
-                <div class="tech-list">
-                  <span>HTML</span>
-                  <span>CSS</span>
-                  <span>JavaScript</span>
-                  <span>Node.js</span>
-                  <span>MongoDB</span>
-                  <span>C#</span>
-                  <span>.NET</span>
-                  <span>MVC</span>
-                  <span>MVVM</span>
-                  <span>SOA</span>
-                  <span>Bootstrap</span>
-                  <span>Visual Studio</span>
-                  <span>VS Code</span>
-                </div>
-              </div>
-              <div class="skills-box">
-                <h3>🛠️ Technologie i języki, z którymi miałem do czynienia</h3>
-                <div class="tech-list">
-                  <span>ASP.NET Core</span>
-                  <span>Entity Framework Core</span>
-                  <span>Firebase</span>
-                  <span>PHP</span>
-                  <span>WPF</span>
-                  <span>React</span>
-                  <span>jQuery</span>
-                  <span>REST API</span>
-                  <span>C</span>
-                  <span>C++</span>
-                  <span>Java</span>
-                  <span>Python</span>
-                  <span>SQL</span>
-                  <span>R</span>
-                  <span>Swagger</span>
-                  <span>Git</span>
-                  <span>Android Studio</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="interests">
-        <div class="particles-wrapper">
-          <div class="particles-overlay" id="particles-interests"></div>
-          <div class="section-content">
-            <h2 class="section-title">🧠 Zainteresowania</h2>
-            <div class="interest-container">
-              <div class="interest-item">
-                <i class="fas fa-brain"></i>
-                <h3>AI & Uczenie Maszynowe</h3>
-                <p>
-                  Tworzenie i wykorzystanie modeli AI w różnych dziedzinach oraz
-                  aplikacjach.
-                </p>
-              </div>
-
-              <div class="interest-item">
-                <i class="fas fa-cloud"></i>
-                <h3>Rozwiązania Chmurowe</h3>
-                <p>
-                  Interesują mnie rozwiązania chmurowe, w szczególności
-                  Firebase.
-                </p>
-              </div>
-
-              <div class="interest-item">
-                <i class="fas fa-microchip"></i>
-                <h3>Mikrokontrolery STM</h3>
-                <p>
-                  Hobbystycznie programuję mikrokontrolery STM, które
-                  wykorzystuję w autorskich konstrukcjach.
-                </p>
-              </div>
-
-              <div class="interest-item">
-                <i class="fas fa-robot"></i>
-                <h3>Tworzenie Robotów</h3>
-                <p>
-                  Projektuję i konstruuję własne urządzenia i roboty, rozwijając
-                  umiejętności w lutowaniu.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact">
-        <div class="particles-wrapper">
-          <div class="particles-overlay" id="particles-contact"></div>
-          <div class="section-content">
-            <h2 class="section-title">Kontakt</h2>
+          <div class="about-card">
+            <i class="fas fa-code"></i>
+            <h3>Co robię</h3>
             <p>
-              Masz pytania lub chcesz nawiązać współpracę? Skontaktuj się ze
-              mną!
+              Tworzę aplikacje od podstaw – od dopracowanego interfejsu i
+              przyjaznej obsługi, po backend z własnym API i logiką biznesową.
+              Zrealizowałem wiele projektów eksperymentalnych oraz w ramach
+              studiów – te najciekawsze prezentuję tutaj. Interesuje mnie
+              wykorzystanie AI i Data Science w praktycznych rozwiązaniach,
+              dlatego chętnie eksperymentuję z nowymi frameworkami i narzędziami
+              oraz tworzę własne modele od podstaw.
             </p>
-
-            <div class="contact-links">
-              <a
-                href="https://www.linkedin.com/in/marek-sigmund-235164357"
-                target="_blank"
-                class="contact-item"
-              >
-                <i class="fab fa-linkedin"></i> LinkedIn
-              </a>
-              <a
-                href="https://github.com/mareksigmund/Projekty"
-                target="_blank"
-                class="contact-item"
-              >
-                <i class="fab fa-github"></i> GitHub
-              </a>
-              <!-- <a href="mailto:twojemail@example.com" class="contact-item">
-                <i class="fas fa-envelope"></i> Email
-              </a> -->
-              <a href="assets/CV_Marek.pdf" download class="contact-item">
-                <i class="fas fa-file-download"></i> Pobierz CV
-              </a>
-            </div>
+          </div>
+          <div class="about-card">
+            <i class="fas fa-people-group"></i>
+            <h3>Jak lubię pracować</h3>
+            <p>
+              W pracy cenię otwartą komunikację, konstruktywny feedback i dobrą
+              atmosferę sprzyjającą wymianie doświadczeń. Doceniam współpracę w
+              zespole, ale równie dobrze odnajduję się w pracy samodzielnej.
+              Zależy mi na ciągłym rozwoju, poszerzaniu umiejętności i wnoszeniu
+              realnej wartości do projektów, szczególnie tych opartych na
+              nowoczesnych technologiach.
+            </p>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
+
+    <!-- Projekty -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <span class="eyebrow">Projekty</span>
+        <h2>Wybrane realizacje</h2>
+        <div class="grid">
+          <div class="card">
+            <div class="card-content">
+              <h3>EventManager</h3>
+              <p>
+                Aplikacja do organizacji wydarzeń z systemem ról i uprawnień,
+                ułatwiająca kompleksowe zarządzanie eventami.
+              </p>
+              <span class="tags">MVC • .NET • SQL Server</span>
+            </div>
+            <a href="projects/eventmanager.html">Zobacz więcej →</a>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <h3>LibraryApp</h3>
+              <p>
+                Desktopowy system biblioteczny do rezerwacji, wypożyczeń i
+                zarządzania katalogiem książek.
+              </p>
+              <span class="tags">WPF • .NET • EF Core • SQL </span>
+            </div>
+            <a href="projects/library.html">Zobacz więcej →</a>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <h3>RestaurantApp</h3>
+              <p>
+                Platforma do przeglądania restauracji, filtrowania ofert i
+                rezerwacji stolików z personalizowanymi rekomendacjami
+              </p>
+              <span class="tags">Angular • Node.js • Firebase</span>
+            </div>
+            <a href="projects/restaurant.html">Zobacz więcej →</a>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <h3>Learning Tracker</h3>
+              <p>
+                Aplikacja do tworzenia notatek, generowania quizów z AI i
+                śledzenia postępów nauki.
+              </p>
+              <span class="tags">Angular • .NET • Cohere(AI)</span>
+            </div>
+            <a href="projects/learningtracker.html">Zobacz więcej →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tech-stack">
+      <div class="container">
+        <span class="eyebrow">Technologie</span>
+        <h2>Technologie, z którymi pracowałem</h2>
+        <div class="tech-grid">
+          <span class="tech">HTML</span>
+          <span class="tech">CSS</span>
+          <span class="tech">JavaScript</span>
+          <span class="tech">TypeScript</span>
+          <span class="tech">Angular</span>
+          <span class="tech">React</span>
+          <span class="tech">C#</span>
+          <span class="tech">.NET</span>
+          <span class="tech">Entity Framework</span>
+          <span class="tech">WPF</span>
+          <span class="tech">SQL</span>
+          <span class="tech">MongoDB</span>
+          <span class="tech">Firebase</span>
+          <span class="tech">Node.js</span>
+          <span class="tech">Express</span>
+          <span class="tech">Python</span>
+          <span class="tech">TensorFlow</span>
+          <span class="tech">PyTorch</span>
+          <span class="tech">Git</span>
+          <span class="tech">REST API</span>
+        </div>
+      </div>
+    </section>
+    <!-- Zainteresowania -->
+    <section class="interests">
+      <div class="container">
+        <span class="eyebrow">hobby</span>
+        <h2>Zainteresowania</h2>
+        <div class="interest-grid">
+          <div class="interest">
+            <i class="fas fa-brain"></i>
+            <h3>Sztuczna inteligencja</h3>
+            <p>
+              Interesuję się sieciami neuronowymi, szczególnie w zadaniach
+              klasyfikacji obrazów. Chętnie eksperymentuję z różnymi
+              frameworkami, takimi jak TensorFlow, PyTorch czy scikit-learn,
+              dobierając narzędzia do konkretnego projektu. Lubię łączyć AI z
+              aplikacjami webowymi i sprawdzać w praktyce nowe pomysły.
+            </p>
+          </div>
+          <div class="interest">
+            <i class="fas fa-cloud"></i>
+            <h3>Chmura</h3>
+            <p>
+              Interesuję się technologiami chmurowymi, szczególnie w obszarze
+              przechowywania danych i uwierzytelniania użytkowników. Najczęściej
+              korzystam z Firebase, ale lubię też testować inne rozwiązania
+              cloudowe i sprawdzać, jak mogą usprawnić działanie aplikacji w
+              praktyce.
+            </p>
+          </div>
+          <div class="interest">
+            <i class="fas fa-microchip"></i>
+            <h3>Mikrokontrolery i robotyka</h3>
+            <p>
+              Lubię tworzyć proste roboty mobilne i programować mikrokontrolery,
+              głównie z rodziny STM32. To hobby, w którym łączę kodowanie z
+              elektroniką – samodzielnie lutuję elementy, projektuję układy z
+              czujnikami i modułami oraz rozwijam własne konstrukcje krok po
+              kroku.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stopka -->
+    <footer>
+      <div class="footer-container">
+        <p class="footer-name">© 2025 Marek Sigmund</p>
+        <p class="footer-tagline">Stworzone z pasją i odrobiną kawy ☕</p>
+        <div class="footer-links">
+          <a href="assets/cv/CV_Marek.pdf" target="_blank">CV</a>
+          <a href="https://github.com/mareksigmund/Projekty" target="_blank"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/marek-sigmund-235164357"
+            target="_blank"
+            >LinkedIn</a
+          >
+          <a href="mailto:m.sigmund@o2.pl">E-mail</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

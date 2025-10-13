@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Tracker – Projekt</title>
+    <link rel="stylesheet" href="../assets/css/style_app.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="../assets/js/gallery.js"></script>
+  </head>
+  <body>
+    <section class="project-page">
+      <div class="container">
+        <a href="../index.html#projects" class="back"
+          >← Powrót do strony głównej</a
+        >
+
+        <h1>Learning Tracker</h1>
+        <p class="intro">
+          Nowoczesna aplikacja edukacyjna, która łączy tworzenie notatek,
+          generowanie quizów z pomocą AI lub bazy danych oraz analizę postępów w
+          oparciu o rozbudowane statystyki.
+        </p>
+
+        <ul class="tech-list">
+          <li>Angular</li>
+          <li>.NET</li>
+          <li>ASP.NET Core</li>
+          <li>Firebase</li>
+          <li>SQL Server</li>
+          <li>Cohere (AI backend)</li>
+        </ul>
+
+        <div class="o-projekcie o-projekcie-grid">
+          <div class="column">
+            <h3>Możliwości aplikacji</h3>
+            <p>
+              <strong>Learning Tracker</strong> wspiera naukę, łącząc notatki z
+              interaktywnymi quizami. Każda notatka przypisana jest do
+              kategorii, co pozwala tworzyć pytania dopasowane do tematu.
+            </p>
+
+            <p>
+              Dostępne są trzy tryby quizów:
+              <strong>AI</strong> (generowane z treści notatek),
+              <strong>baza danych</strong> (pytania przypisane do kategorii)
+              oraz <strong>mieszany</strong> (łączenie obu metod). Dzięki
+              integracji z <strong>Cohere</strong> każde pytanie jest unikalne.
+            </p>
+
+            <p>
+              Aplikacja umożliwia także przeglądanie i filtrowanie wszystkich
+              pytań z bazy, co pozwala uczyć się lub sprawdzać wiedzę bez
+              konieczności rozwiązywania całego testu.
+            </p>
+          </div>
+
+          <div class="column">
+            <h3>Technologie i architektura</h3>
+            <p>
+              Wyniki quizów zapisywane są w systemie i prezentowane w panelu
+              statystyk, gdzie <strong>StatsComponent</strong> wizualizuje dane
+              w formie wykresów (<strong>Chart.js</strong>), tabel i podsumowań,
+              ułatwiając analizę postępów.
+            </p>
+            <p>
+              Aplikacja powstała w <strong>Angularze</strong> (Standalone
+              Components) z backendem w <strong>ASP.NET Core</strong>. Dane
+              przechowywane są w <strong>SQL Serverze</strong>, a
+              <strong>Firebase</strong> zapewnia uwierzytelnianie i integrację w
+              czasie rzeczywistym.
+            </p>
+            <p>
+              Interfejs jest lekki, nowoczesny i dostosowany do pracy na
+              desktopach i urządzeniach mobilnych.
+            </p>
+          </div>
+        </div>
+
+        <p class="gallery-lead">Zajrzyj do środka aplikacji</p>
+        <div class="gallery-wrapper">
+          <div class="gallery-main">
+            <p id="image-caption" class="image-caption">
+              Panel główny aplikacji
+            </p>
+            <img
+              id="main-image"
+              src="../assets/img/learnapp/panel_główny.png"
+              alt="Panel główny aplikacji"
+            />
+          </div>
+          <div class="gallery-thumbnails">
+            <img
+              src="../assets/img/learnapp/panel_główny.png"
+              alt="Panel główny aplikacji"
+              onclick="setMainImage(this)"
+            />
+            <img
+              src="../assets/img/learnapp/rejestracja.png"
+              alt="Formualrz rejestracji"
+              onclick="setMainImage(this)"
+            />
+
+            <img
+              src="../assets/img/learnapp/logowanie.png"
+              alt="Formualrz logowania"
+              onclick="setMainImage(this)"
+            />
+
+            <img
+              src="../assets/img/learnapp/notatki.png"
+              alt="Lista notatek uzytkownika"
+              onclick="setMainImage(this)"
+            />
+
+            <img
+              src="../assets/img/learnapp/podgląd_notatki.png"
+              alt="Podgląd wybranej notatki"
+              onclick="setMainImage(this)"
+            />
+            <img
+              src="../assets/img/learnapp/dodawanie_notatki.png"
+              alt="Dodawanie nowej notatki uzytkownika"
+              onclick="setMainImage(this)"
+            />
+            <img
+              src="../assets/img/learnapp/pytanie_quiz_ai.png"
+              alt="Quzi z wykorzystaniem AI na podstawie wybranej notatki uzytkownika"
+              onclick="setMainImage(this)"
+            />
+            <img
+              src="../assets/img/learnapp/wynik_quizu_ai.png"
+              alt="Wynik rozwiązanego quizu"
+              onclick="setMainImage(this)"
+            />
+            <img
+              src="../assets/img/learnapp/statystyki.png"
+              alt="statystyki użytkownika"
+              onclick="setMainImage(this)"
+            />
+            <img
+              src="../assets/img/learnapp/zmiana_nicku.png"
+              alt="Zmiania wyświetlanej nazwy użytkownika"
+              onclick="setMainImage(this)"
+            />
+          </div>
+        </div>
+        <div id="fullscreen-modal">
+          <img id="fullscreen-image" src="" alt="Podgląd powiększony" />
+        </div>
+        <p class="gallery-lead">Pomysły na rozwój:</p>
+        <ul class="feature-list">
+          <li>Ranking użytkowników na podstawie skuteczności</li>
+          <li>Rozbudowane quizy z pytaniami wielokrotnego wyboru</li>
+          <li>System punktów i poziomów motywacyjnych</li>
+          <li>Tryb nauki z inteligentnym powtórzeniem materiału</li>
+          <li>
+            Ulepszony interfejs z kolorami notatek i możliwością ich grupowania
+          </li>
+        </ul>
+
+        <div class="project-links">
+          <a
+            href="https://github.com/mareksigmund/Projekty/tree/main/Learning_Tracker"
+            target="_blank"
+            class="btn github-btn"
+          >
+            <svg
+              class="github-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              width="20"
+              height="20"
+            >
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.08-2.7-1.08-.36-.91-.88-1.15-.88-1.15-.72-.5.06-.49.06-.49.8.06 1.22.83 1.22.83.71 1.21 1.86.86 2.31.66.07-.52.28-.86.5-1.06-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.58.82-2.14-.08-.2-.36-1.01.08-2.1 0 0 .67-.21 2.2.82A7.63 7.63 0 018 4.59a7.6 7.6 0 012 .27c1.53-1.03 2.2-.82 2.2-.82.44 1.09.16 1.9.08 2.1.51.56.82 1.27.82 2.14 0 3.07-1.87 3.75-3.65 3.95.28.24.53.73.53 1.48v2.2c0 .21.15.46.55.38A8 8 0 0016 8c0-4.42-3.58-8-8-8z"
+              />
+            </svg>
+            Zobacz kod na GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <p class="footer-name">© 2025 Marek Sigmund</p>
+        <p class="footer-tagline">Stworzone z pasją i odrobiną kawy ☕</p>
+        <div class="footer-links">
+          <a href="assets/cv/CV_Marek.pdf" target="_blank">CV</a>
+          <a href="https://github.com/mareksigmund/Projekty" target="_blank"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/marek-sigmund-235164357"
+            target="_blank"
+            >LinkedIn</a
+          >
+          <a href="mailto:m.sigmund@o2.pl">E-mail</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

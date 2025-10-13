@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EventManager – Projekt</title>
+    <link rel="stylesheet" href="../assets/css/style_app.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="../assets/js/gallery.js"></script>
+  </head>
+  <body>
+    <section class="project-page">
+      <div class="container">
+        <a href="../index.html#projects" class="back"
+          >← Powrót do strony głównej</a
+        >
+
+        <h1>EventManager</h1>
+        <p class="intro">
+          Aplikacja webowa do tworzenia i zarządzania wydarzeniami, z systemem
+          ról użytkowników i kontrolą dostępu. Powstała jako samodzielna
+          inicjatywa hobbystyczna – od backendu po frontend – zrealizowana w
+          technologii ASP.NET Core MVC.
+        </p>
+
+        <ul class="tech-list">
+          <li>ASP.NET Core MVC</li>
+          <li>Entity Framework Core</li>
+          <li>Microsoft Identity</li>
+          <li>SQL Server</li>
+          <li>Razor Pages</li>
+          <li>Bootstrap</li>
+        </ul>
+
+        <div class="o-projekcie o-projekcie-grid">
+          <div class="column">
+            <h3>Możliwości aplikacji</h3>
+            <p>
+              <strong>EventManager</strong> to aplikacja webowa zaprojektowana
+              do kompleksowego zarządzania wydarzeniami — od szkoleń i
+              konferencji po eventy firmowe. Umożliwia tworzenie i edytowanie
+              wydarzeń, obsługę zapisów uczestników oraz przypisywanie ról z
+              różnymi poziomami uprawnień. Całość oparta jest na przejrzystym
+              panelu administracyjnym, który zapewnia intuicyjną nawigację i
+              szybki dostęp do kluczowych funkcji.
+            </p>
+            <p>
+              Użytkownicy mogą tworzyć, edytować i publikować wydarzenia,
+              określając ich nazwę, datę, miejsce, limit miejsc oraz opis.
+              Zapisy na wydarzenia odbywają się przez dedykowany formularz.
+              System wspiera cztery poziomy dostępu:
+              <strong>Administrator</strong>, <strong>Organizator</strong>,
+              <strong>Moderator</strong> oraz <strong>Użytkownik</strong>.
+            </p>
+          </div>
+          <div class="column">
+            <h3>Technologie i architektura</h3>
+            <p>
+              Projekt został zrealizowany w oparciu o
+              <strong>ASP.NET Core MVC</strong> z wykorzystaniem
+              <strong>Entity Framework Core</strong> do obsługi warstwy danych
+              oraz <strong>ASP.NET Identity</strong> do zarządzania kontami,
+              rolami i procesem uwierzytelniania. Dane przechowywane są w
+              relacyjnej bazie <strong>SQL Server</strong>, co zapewnia
+              skalowalność i spójność informacji.
+            </p>
+            <p>
+              Warstwa frontendowa przygotowana została w klasycznym stylu
+              <strong>Razor Views (MVC)</strong>, z naciskiem na czytelny układ,
+              przejrzystą strukturę kodu i łatwą możliwość rozbudowy o nowe
+              moduły. Rozwiązanie to stanowi solidną bazę do tworzenia bardziej
+              zaawansowanych systemów, w tym integracji z zewnętrznymi usługami,
+              obsługi powiadomień czy systemów raportowania.
+            </p>
+          </div>
+        </div>
+
+        <p class="gallery-lead">Jak wygląda EventAPP?</p>
+
+        <div class="gallery-wrapper">
+          <div class="gallery-main">
+            <img
+              id="main-image"
+              src="../assets/img/eventmanager/main_widok.png"
+              alt="Główne okno"
+            />
+            <p id="image-caption" class="image-caption">
+              Główne okno aplikacji
+            </p>
+          </div>
+
+          <div class="gallery-thumbnails">
+            <div class="thumb">
+              <img
+                src="../assets/img/eventmanager/main_widok.png"
+                alt="Główne okno aplikacji"
+                onclick="setMainImage(this)"
+              />
+            </div>
+
+            <div class="thumb">
+              <img
+                src="../assets/img/eventmanager/rejestracja_i_logowanie.png"
+                alt="Formularz rejestracji i logowania"
+                onclick="setMainImage(this)"
+              />
+            </div>
+            <div class="thumb">
+              <img
+                src="../assets/img/eventmanager/panel_admina.png"
+                alt="Panel administratora"
+                onclick="setMainImage(this)"
+              />
+            </div>
+
+            <div class="thumb">
+              <img
+                src="../assets/img/eventmanager/panel_moda.png"
+                alt="Panel Moderatora"
+                onclick="setMainImage(this)"
+              />
+            </div>
+
+            <div class="thumb">
+              <img
+                src="../assets/img/eventmanager/panel_organizatora.png"
+                alt="Panel Organizatora"
+                onclick="setMainImage(this)"
+              />
+            </div>
+
+            <div class="thumb">
+              <img
+                src="../assets/img/eventmanager/panel_uzytkownika.png"
+                alt="Panel Użytkownika"
+                onclick="setMainImage(this)"
+              />
+            </div>
+
+            <div class="thumb">
+              <img
+                src="../assets/img/eventmanager/dodawanie_eventow.png"
+                alt="Dodanie wydarzenia"
+                onclick="setMainImage(this)"
+              />
+            </div>
+
+            <div class="thumb">
+              <img
+                src="../assets/img/eventmanager/zarzadzanie_userami_i_lista_wydarzen_admin.png"
+                alt="Lista wydarzeń i zarządzanie użytkownikami (widok Admina)"
+                onclick="setMainImage(this)"
+              />
+            </div>
+
+            <div class="thumb">
+              <img
+                src="../assets/img/eventmanager/szczegoly_i_zapis.png"
+                alt="Szczegóły wydarzenia i zapis na wydarzenie (widok Uzytkownika)"
+                onclick="setMainImage(this)"
+              />
+            </div>
+          </div>
+        </div>
+        <div id="fullscreen-modal">
+          <img id="fullscreen-image" src="" alt="Podgląd powiększony" />
+        </div>
+
+        <p class="gallery-lead">Planowane w kolejnych aktualizacjach:</p>
+        <ul class="feature-list">
+          <li>Integracja z Google Calendar</li>
+          <li>Powiadomienia e-mail i push</li>
+          <li>Eksport CSV / PDF</li>
+          <li>Panel Moderatora 2.0</li>
+          <li>Poprawki UI/UX</li>
+        </ul>
+
+        <div class="project-links">
+          <a
+            href="https://github.com/mareksigmund/Projekty/tree/main/EventAPP"
+            target="_blank"
+            class="btn github-btn"
+          >
+            <svg
+              class="github-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              width="20"
+              height="20"
+            >
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.08-2.7-1.08-.36-.91-.88-1.15-.88-1.15-.72-.5.06-.49.06-.49.8.06 1.22.83 1.22.83.71 1.21 1.86.86 2.31.66.07-.52.28-.86.5-1.06-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.58.82-2.14-.08-.2-.36-1.01.08-2.1 0 0 .67-.21 2.2.82A7.63 7.63 0 018 4.59a7.6 7.6 0 012 .27c1.53-1.03 2.2-.82 2.2-.82.44 1.09.16 1.9.08 2.1.51.56.82 1.27.82 2.14 0 3.07-1.87 3.75-3.65 3.95.28.24.53.73.53 1.48v2.2c0 .21.15.46.55.38A8 8 0 0016 8c0-4.42-3.58-8-8-8z"
+              />
+            </svg>
+            Zobacz kod na GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-container">
+        <p class="footer-name">© 2025 Marek Sigmund</p>
+        <p class="footer-tagline">Stworzone z pasją i odrobiną kawy ☕</p>
+        <div class="footer-links">
+          <a href="assets/cv/CV_Marek.pdf" target="_blank">CV</a>
+          <a href="https://github.com/mareksigmund/Projekty" target="_blank"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/marek-sigmund-235164357"
+            target="_blank"
+            >LinkedIn</a
+          >
+          <a href="mailto:m.sigmund@o2.pl">E-mail</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
