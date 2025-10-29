@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budżetownik – Projekt</title>
+    <link rel="stylesheet" href="../assets/css/style_app.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="../assets/js/gallery.js"></script>
+  </head>
+  <body>
+    <section class="project-page">
+      <div class="container">
+        <a href="../index.html#projects" class="back"
+          >← Powrót do strony głównej</a
+        >
+
+        <h1>Budżetownik</h1>
+        <p class="intro">
+          Aplikacja do zarządzania budżetem domowym zbudowana w
+          <strong>Laravel (PHP)</strong> z <strong>MySQL</strong> i
+          <strong>Tailwind CSS</strong>. Projekt powstał jako
+          <em>powrót do PHP</em> po dłuższej przerwie oraz sposób na
+          <strong>naukę frameworka Laravel</strong> w praktyce poprzez
+          stworzenie kompletnej, nowoczesnej aplikacji.
+        </p>
+
+        <ul class="tech-list">
+          <li>Laravel</li>
+          <li>PHP</li>
+          <li>Blade</li>
+          <li>Tailwind CSS</li>
+          <li>Vite</li>
+          <li>MySQL</li>
+          <li>Chart.js</li>
+          <li>Laravel Breeze</li>
+          <li>Integracja z MockBank API</li>
+        </ul>
+
+        <div class="o-projekcie o-projekcie-grid">
+          <div class="column">
+            <h3>Możliwości aplikacji</h3>
+            <p>
+              <strong>Budżetownik</strong> pozwala w prosty sposób zarządzać
+              finansami — dodawać i przeglądać transakcje, tworzyć własne
+              kategorie z kolorami, filtrować dane oraz śledzić kluczowe
+              wskaźniki w panelu głównym.
+            </p>
+            <p>
+              Aplikacja umożliwia zestawienie przychodów i wydatków w ujęciu
+              miesięcznym oraz wizualizację danych na interaktywnych wykresach
+              (<strong>Chart.js</strong>). Kolory kategorii są automatycznie
+              przenoszone na wykresy, co ułatwia analizę i zachowuje spójność
+              wizualną.
+            </p>
+            <p>
+              Użytkownik może dowolnie filtrować dane według okresu, kategorii
+              lub typu transakcji, korzystać z wyszukiwarki i sortowania, a
+              także w prosty sposób edytować lub usuwać wpisy. System obsługuje
+              zarówno transakcje ręczne, jak i te importowane z zewnętrznych
+              źródeł.
+            </p>
+          </div>
+
+          <div class="column">
+            <h3>Architektura i UX</h3>
+            <p>
+              Backend zbudowano w <strong>Laravel</strong> z wykorzystaniem
+              <strong>Eloquent ORM</strong>, kontrolerów REST oraz requestów z
+              walidacją. Warstwa widoków oparta jest o <strong>Blade</strong> i
+              <strong>Tailwind CSS</strong> (utility-first), a zasoby
+              kompilowane są przy pomocy <strong>Vite</strong>.
+            </p>
+            <p>
+              Aplikacja została zaprojektowana w duchu prostoty i czytelności —
+              interfejs jest lekki, nowoczesny i przygotowany na dalszy rozwój,
+              np. wdrożenie budżetów miesięcznych, rozszerzeń analitycznych lub
+              integracji z innymi bankami.
+            </p>
+            <p>
+              System logowania i rejestracji oparty jest o
+              <strong>Laravel Breeze</strong>. Zastosowano spójny układ i
+              ergonomiczne komponenty interfejsu, dzięki czemu użytkownik może
+              zarządzać finansami szybko i intuicyjnie.
+            </p>
+          </div>
+        </div>
+
+        <!-- Galeria -->
+        <p class="gallery-lead">Zajrzyj do środka aplikacji</p>
+        <div class="gallery-wrapper">
+          <div class="gallery-main">
+            <p id="image-caption" class="image-caption">
+              Ekran logowania do aplikacji
+            </p>
+            <img
+              id="main-image"
+              src="../assets/img/budzetownik/ekran_logowania.png"
+              alt="Ekran logowania do aplikacji"
+            />
+          </div>
+          <div class="gallery-thumbnails">
+            <img
+              src="../assets/img/budzetownik/ekran_logowania.png"
+              alt="Ekran logowania do aplikacji"
+              onclick="setMainImage(this)"
+            />
+            <img
+              src="../assets/img/budzetownik/tworzenie_transkacji.png"
+              alt="Tworzenie nowej transkacji"
+              onclick="setMainImage(this)"
+            />
+            <img
+              src="../assets/img/budzetownik/dasboard_po_dodaniu_transakcji.png"
+              alt="Dashboard po dodaniu transakcji"
+              onclick="setMainImage(this)"
+            />
+            <img
+              src="../assets/img/budzetownik/dodawanie_kategorii.png"
+              alt="Dodawanie nowej kategorii"
+              onclick="setMainImage(this)"
+            />
+            <img
+              src="../assets/img/budzetownik/lista_kategorii.png"
+              alt="Lista kategorii"
+              onclick="setMainImage(this)"
+            />
+            <img
+              src="../assets/img/budzetownik/laczenie_z_bankiem.png"
+              alt="Synchronizacja z bankiem (MockBank)"
+              onclick="setMainImage(this)"
+            />
+            <img
+              src="../assets/img/budzetownik/lista_transakcji.png"
+              alt="lista_transakcji"
+              onclick="setMainImage(this)"
+            />
+            <img
+              src="../assets/img/budzetownik/lista_transakcji_z_filterm_i_przpisaniem_kategorii.png"
+              alt="Lista transakcji z filtrem i przypisaniem kategorii"
+              onclick="setMainImage(this)"
+            />
+
+            <img
+              src="../assets/img/budzetownik/dasboard_po_synchronizacji_z_bankiem_1.png"
+              alt="Dashboard po synchronizacji z bankiem 1/3"
+              onclick="setMainImage(this)"
+            />
+            <img
+              src="../assets/img/budzetownik/dasboard_po_synchronizacji_z_bankiem_2.png"
+              alt="Dashboard po synchronizacji z bankiem 2/3"
+              onclick="setMainImage(this)"
+            />
+            <img
+              src="../assets/img/budzetownik/dasboard_po_synchronizacji_z_bankiem_3.png"
+              alt="Dashboard po synchronizacji z bankiem 3/3"
+              onclick="setMainImage(this)"
+            />
+          </div>
+        </div>
+        <div id="fullscreen-modal">
+          <img id="fullscreen-image" src="" alt="Podgląd powiększony" />
+        </div>
+
+        <div class="o-projekcie o-projekcie-grid">
+          <div class="column">
+            <h3>Integracja z MockBank API</h3>
+            <p>
+              <strong>Budżetownik</strong> współpracuje z moim projektem
+              <a href="mockbankapi.html" class="inline-link"
+                ><strong>MockBank API</strong></a
+              >, z którego pobiera transakcje bankowe. Wystarczy podać
+              identyfikator <em>Owner</em> (email / prefix / ObjectId), a
+              aplikacja pobiera dane z użyciem globalnego
+              <strong>API key</strong>.
+            </p>
+            <p>
+              System rozróżnia źródło każdej operacji (<em>Bank</em> /
+              <em>Ręczne</em>) oraz stosuje <strong>auto-kategoryzację</strong>
+              na podstawie reguł i presetów. Jeśli opis nie pasuje do znanych
+              kategorii, transakcja trafia do sekcji
+              <em>Nieskategoryzowane</em>, skąd użytkownik może ją łatwo
+              przypisać.
+            </p>
+          </div>
+
+          <div class="column">
+            <h3>Funkcje w skrócie</h3>
+            <ul class="feature-list">
+              <li>KPI: Przychody, Wydatki, Bilans miesięczny</li>
+              <li>
+                Wykresy kategorii (<strong>Chart.js</strong>) z kolorami
+                zdefiniowanymi w UI
+              </li>
+              <li>Filtry: okres, kategoria, typ, źródło + wyszukiwarka</li>
+              <li>Szybkie dodawanie / edycja / usuwanie transakcji</li>
+              <li>Dane demo do testowania interfejsu</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="gallery-lead">Pomysły na rozwój:</p>
+        <ul class="feature-list">
+          <li>Synchronizacja w czasie rzeczywistym</li>
+          <li>Obsługa wielu banków i kont jednocześnie</li>
+          <li>Wsparcie dla multiwalut — planowane rozszerzenie API</li>
+          <li>Budżety miesięczne i limity dla kategorii</li>
+          <li>Raporty roczne oraz eksport danych</li>
+        </ul>
+
+        <div class="project-links">
+          <a
+            href="https://github.com/mareksigmund/Projekty/tree/main/Budzetownik"
+            target="_blank"
+            class="btn github-btn"
+          >
+            <svg
+              class="github-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              width="20"
+              height="20"
+            >
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.08-2.7-1.08-.36-.91-.88-1.15-.88-1.15-.72-.5.06-.49.06-.49.8.06 1.22.83 1.22.83.71 1.21 1.86.86 2.31.66.07-.52.28-.86.5-1.06-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.58.82-2.14-.08-.2-.36-1.01.08-2.1 0 0 .67-.21 2.2.82A7.63 7.63 0 018 4.59a7.6 7.6 0 012 .27c1.53-1.03 2.2-.82 2.2-.82.44 1.09.16 1.9.08 2.1.51.56.82 1.27.82 2.14 0 3.07-1.87 3.75-3.65 3.95.28.24.53.73.53 1.48v2.2c0 .21.15.46.55.38A8 8 0 0016 8c0-4.42-3.58-8-8-8z"
+              />
+            </svg>
+            Zobacz kod na GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <p class="footer-name">© 2025 Marek Sigmund</p>
+        <p class="footer-tagline">Stworzone z pasją i odrobiną kawy ☕</p>
+        <div class="footer-links">
+          <a href="../assets/cv/CV_Marek.pdf" target="_blank">CV</a>
+          <a href="https://github.com/mareksigmund/Projekty" target="_blank"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/marek-sigmund-235164357"
+            target="_blank"
+            >LinkedIn</a
+          >
+          <a href="mailto:m.sigmund@o2.pl">E-mail</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

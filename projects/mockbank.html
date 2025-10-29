@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MockBank UI – Projekt</title>
+    <link rel="stylesheet" href="../assets/css/style_app.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="../assets/js/gallery.js"></script>
+  </head>
+
+  <body>
+    <section class="project-page">
+      <div class="container">
+        <a href="../index.html#projects" class="back"
+          >← Powrót do strony głównej</a
+        >
+
+        <h1>MockBank UI</h1>
+        <p class="intro">
+          Frontend „bankowy” zbudowany w <strong>React + TypeScript</strong> z
+          <strong>Tailwind CSS</strong> i <strong>TanStack Query</strong> jako
+          <em>interfejs</em> dla mojego
+          <a href="../projects/mockbankapi.html" class="inline-link"
+            ><strong>MockBank API</strong></a
+          >. Projekt ma charakter <strong>dev/testowy</strong> – narzędzie do
+          pracy z API (konta, transakcje, przelewy, webhooki, statystyki) i nie
+          jest jeszcze przeznaczone do produkcji.
+        </p>
+
+        <ul class="tech-list" aria-label="Wykorzystane technologie">
+          <li>React</li>
+          <li>TypeScript</li>
+          <li>Tailwind CSS</li>
+          <li>Vite</li>
+          <li>Axios</li>
+          <li>Integracja z MockBank API</li>
+        </ul>
+
+        <div class="o-projekcie o-projekcie-grid ui-plain">
+          <div class="column">
+            <h3>Co potrafi UI</h3>
+            <p>
+              <strong>MockBank UI</strong> to interaktywny interfejs bankowy
+              stworzony z myślą o testowaniu i pracy z
+              <a href="../projects/mockbankapi.html" class="inline-link"
+                ><strong>MockBank API</strong></a
+              >. Pozwala zarządzać kontami, wykonywać operacje finansowe i
+              analizować dane w czasie rzeczywistym w sposób zbliżony do
+              prawdziwych aplikacji bankowych.
+            </p>
+            <ul class="list-plain">
+              <li>
+                Lista kont z podglądem szczegółów (saldo, IBAN, akcje
+                użytkownika).
+              </li>
+              <li>
+                Historia transakcji z filtrami, paginacją i możliwością
+                szybkiego dodawania.
+              </li>
+              <li>
+                <em>Symulacje</em> operacji — presety lub tryb ręczny dla testów
+                API.
+              </li>
+              <li>
+                Przelewy wewnętrzne między własnymi rachunkami (walidacje,
+                auto-odświeżanie sald).
+              </li>
+              <li>
+                Panel <strong>webhooków</strong> — rejestracja, testy i
+                weryfikacja podpisu HMAC.
+              </li>
+              <li>
+                <strong>Statystyki</strong> — bilans, przychody, wydatki i
+                wykresy dla wybranego okresu.
+              </li>
+            </ul>
+          </div>
+
+          <div class="column">
+            <h3>Architektura i UX</h3>
+            <p>
+              Interfejs zaprojektowano w duchu prostoty i szybkości działania —
+              jest lekki, responsywny i przyjazny dla deweloperów testujących
+              API. Struktura kodu zachowuje czytelny podział odpowiedzialności i
+              przewidywalny przepływ danych.
+            </p>
+            <ul class="list-plain">
+              <li>Cache i automatyczne odświeżanie danych po operacjach.</li>
+              <li>
+                Walidacja formularzy (<strong>Zod</strong>) i przejrzysta
+                obsługa błędów.
+              </li>
+              <li>
+                Warstwa komunikacji oparta o <strong>Axios</strong> z
+                interceptorami i tokenem JWT.
+              </li>
+              <li>
+                Dbałość o dostępność — aria-etykiety, focus states, klawiaturowa
+                obsługa modali.
+              </li>
+              <li>
+                Projekt o charakterze <strong>dev/testowym</strong> — idealny do
+                demonstracji i integracji z API.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Galeria -->
+        <p class="gallery-lead">Zajrzyj do środka aplikacji</p>
+        <div class="gallery-wrapper">
+          <div class="gallery-main">
+            <p id="image-caption" class="image-caption">
+              Strona główna aplikacji
+            </p>
+            <img
+              id="main-image"
+              src="../assets/img/mockbank/strona_glowna.png"
+              alt="Strona główna aplikacji"
+            />
+          </div>
+          <div class="gallery-thumbnails">
+            <img
+              src="../assets/img/mockbank/strona_glowna.png"
+              alt="Strona główna aplikacji"
+              onclick="setMainImage(this)"
+            />
+            <img
+              src="../assets/img/mockbank/login.png"
+              alt="Ekran logowania"
+              onclick="setMainImage(this)"
+            />
+            <img
+              src="../assets/img/mockbank/dasboard.png"
+              alt="Panel główny uzytkownika"
+              onclick="setMainImage(this)"
+            />
+            <img
+              src="../assets/img/mockbank/statystyki_konta.png"
+              alt="Statystyki i wykresy konta"
+              onclick="setMainImage(this)"
+            />
+            <img
+              src="../assets/img/mockbank/lista_transkacji.png"
+              alt="Lista transakcji"
+              onclick="setMainImage(this)"
+            />
+            <img
+              src="../assets/img/mockbank/lista_kont.png"
+              alt="Lista kont użytkownika"
+              onclick="setMainImage(this)"
+            />
+            <img
+              src="../assets/img/mockbank/szczegoly_konta.png"
+              alt="Szczegóły konta"
+              onclick="setMainImage(this)"
+            />
+            <img
+              src="../assets/img/mockbank/symulacja_tranakscji_preset.png"
+              alt="Symulacja transakcji (presety)"
+              onclick="setMainImage(this)"
+            />
+            <img
+              src="../assets/img/mockbank/symulacja_tranakscji_wlasnej.png"
+              alt="Symulacja transakcji (tryb własny)"
+              onclick="setMainImage(this)"
+            />
+            <img
+              src="../assets/img/mockbank/przelew_miedzy_kontami.png"
+              alt="Przelew między własnymi kontami"
+              onclick="setMainImage(this)"
+            />
+            <img
+              src="../assets/img/mockbank/dodanie_webhook.png"
+              alt="Dodanie webhooka"
+              onclick="setMainImage(this)"
+            />
+          </div>
+        </div>
+        <div id="fullscreen-modal">
+          <img id="fullscreen-image" src="" alt="Podgląd powiększony" />
+        </div>
+
+        <!-- Demo -->
+        <div class="demo-note">
+          <h3>Demo online</h3>
+          <p class="muted">
+            Aplikacja jest hostowana na Vercel:
+            <a
+              href="https://moc-bank-front.vercel.app/"
+              target="_blank"
+              rel="noopener"
+              class="inline-link"
+              >moc-bank-front.vercel.app</a
+            >
+          </p>
+
+          <div class="demo-credentials">
+            <div>
+              <span class="label">Login testowy:</span>
+              <code>alice+test123@example.com</code>
+            </div>
+            <div>
+              <span class="label">Hasło:</span>
+              <code>zaq1@WSX</code>
+            </div>
+          </div>
+
+          <p class="muted small">
+            Można zalogować się na konto demo (z gotowymi danymi) lub
+            <strong>utworzyć własne konto testowe</strong> i przetestować
+            wszystkie funkcje aplikacji.
+          </p>
+
+          <p class="note-warn small">
+            <strong>Uwaga:</strong> backend (<em>MockBank API</em>) działa na
+            darmowym planie hostingu — po dłuższej bezczynności serwis może się
+            „wybudzać”. Jeśli pierwsze logowanie zwróci błąd lub timeout,
+            odczekaj chwilę i spróbuj ponownie lub wybudź API ręcznie:
+            <a
+              href="https://mockbank-iaco.onrender.com/healthz"
+              target="_blank"
+              rel="noopener"
+              class="inline-link"
+              >/healthz</a
+            >.
+          </p>
+        </div>
+
+        <!-- Linki -->
+        <div class="project-links project-links--row">
+          <a
+            href="https://moc-bank-front.vercel.app/"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-primary"
+            aria-label="Otwórz demo aplikacji MockBank UI"
+          >
+            🌐 Otwórz demo
+          </a>
+
+          <a
+            href="https://github.com/mareksigmund/Projekty/tree/main/MocBankFront"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-github"
+            aria-label="Zobacz kod źródłowy MockBank UI na GitHub"
+          >
+            <svg
+              class="github-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              width="20"
+              height="20"
+            >
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.08-2.7-1.08-.36-.91-.88-1.15-.88-1.15-.72-.5.06-.49.06-.49.8.06 1.22.83 1.22.83.71 1.21 1.86.86 2.31.66.07-.52.28-.86.5-1.06-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.58.82-2.14-.08-.2-.36-1.01.08-2.1 0 0 .67-.21 2.2.82A7.63 7.63 0 018 4.59a7.6 7.6 0 012 .27c1.53-1.03 2.2-.82 2.2-.82.44 1.09.16 1.9.08 2.1.51.56.82 1.27.82 2.14 0 3.07-1.87 3.75-3.65 3.95.28.24.53.73.53 1.48v2.2c0 .21.15.46.55.38A8 8 0 0016 8c0-4.42-3.58-8-8-8z"
+              />
+            </svg>
+            Zobacz kod na GitHub
+          </a>
+
+          <a
+            href="../projects/mockbankapi.html"
+            class="btn btn-outline"
+            aria-label="Przejdź do strony projektu MockBank API"
+          >
+            MockBank API →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <p class="footer-name">© 2025 Marek Sigmund</p>
+        <p class="footer-tagline">Stworzone z pasją i odrobiną kawy ☕</p>
+        <div class="footer-links">
+          <a href="../assets/cv/CV_Marek.pdf" target="_blank">CV</a>
+          <a href="https://github.com/mareksigmund/Projekty" target="_blank"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/marek-sigmund-235164357"
+            target="_blank"
+            >LinkedIn</a
+          >
+          <a href="mailto:m.sigmund@o2.pl">E-mail</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
