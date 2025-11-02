@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoLogix – Projekt</title>
+    <link rel="stylesheet" href="../assets/css/style_app.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/tmp.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="../assets/js/gallery.js"></script>
+  </head>
+  <body>
+    <section class="project-page">
+      <div class="container">
+        <a href="../index.html#projects" class="back"
+          >← Powrót do strony głównej</a
+        >
+
+        <h1>AutoLogix</h1>
+        <p class="intro">
+          AutoLogix to aplikacja motoryzacyjna pozwalająca prowadzić dziennik
+          serwisowy i ewidencję tankowań dla wielu pojazdów. Projekt rozwijany
+          jest etapowo w oparciu o ASP.NET Core, Entity Framework Core oraz bazę
+          PostgreSQL.
+        </p>
+
+        <div class="wip-banner">
+          <span class="wip-dot"></span>
+          Status: w trakcie rozwoju. Poniżej aktualny zakres i kolejne etapy.
+        </div>
+
+        <ul class="tech-list">
+          <li>.NET / ASP.NET Core (Minimal API)</li>
+          <li>C#</li>
+          <li>Entity Framework Core</li>
+          <li>PostgreSQL (Neon)</li>
+          <li>JWT Auth</li>
+        </ul>
+
+        <div class="o-projekcie o-projekcie-grid">
+          <div class="column">
+            <h3>Cel aplikacji</h3>
+            <p>
+              <strong>AutoLogix</strong> ma umożliwiać użytkownikowi prowadzenie
+              pełnej historii eksploatacyjnej pojazdu: przeglądy, wymiany,
+              naprawy, tankowania, planowane działania. Każdy wpis może być
+              powiązany z konkretnym przebiegiem oraz kosztem.
+            </p>
+            <p>
+              System zakłada obsługę wielu pojazdów na jednym koncie oraz
+              przechowywanie danych osobno dla każdego użytkownika.
+            </p>
+          </div>
+          <div class="column">
+            <h3>Technologie i architektura</h3>
+            <p>
+              Backend tworzony jest w <strong>ASP.NET Core (.NET 8)</strong>
+              z wykorzystaniem podejścia
+              <strong>Vertical Slice / CQRS-lite</strong> – każda funkcja (np.
+              dodanie pojazdu, dodanie wpisu serwisowego, dodanie tankowania)
+              jest osobnym fragmentem aplikacji z własną walidacją.
+            </p>
+            <p>
+              Warstwa danych opiera się o <strong>EF Core</strong> i bazę
+              <strong>PostgreSQL</strong> (Neon), co pozwala łatwo wdrożyć
+              aplikację w środowisku darmowym / chmurowym. Uwierzytelnianie jest
+              realizowane z użyciem <strong>JWT</strong>.
+            </p>
+          </div>
+        </div>
+
+        <p class="intro">
+          Kolejne kroki rozwoju aplikacji. Statusy będą aktualizowane wraz z
+          postępem prac.
+        </p>
+
+        <div class="roadmap">
+          <div class="roadmap-item done">
+            <h3>1. Model domenowy</h3>
+            <p>
+              Ustalenie podstawowych encji: użytkownik, pojazd, wpis serwisowy,
+              tankowanie, przypomnienie. Powiązania: użytkownik → wiele pojazdów
+              → wiele wpisów.
+            </p>
+            <span class="status">Zrobione</span>
+          </div>
+
+          <div class="roadmap-item in-progress">
+            <h3>2. Szkielet aplikacji (.NET 8)</h3>
+            <p>
+              Rozdzielenie na projekty (Api, Application, Domain,
+              Infrastructure), konfiguracja EF Core i Swaggera, przygotowanie
+              pod zewnętrzną bazę.
+            </p>
+            <span class="status">Zrobione</span>
+          </div>
+
+          <div class="roadmap-item in-progress">
+            <h3>3. Uwierzytelnianie</h3>
+            <p>
+              Rejestracja i logowanie z wykorzystaniem JWT. Przypisanie zasobów
+              do bieżącego użytkownika.
+            </p>
+            <span class="status">W toku</span>
+          </div>
+
+          <div class="roadmap-item todo">
+            <h3>4. Moduł pojazdów</h3>
+            <p>
+              Funkcje: dodawanie, edycja, usuwanie i lista pojazdów; walidacja
+              podstawowych pól; paginacja.
+            </p>
+            <span class="status">Do zrobienia</span>
+          </div>
+
+          <div class="roadmap-item todo">
+            <h3>5. Moduł serwisów</h3>
+            <p>
+              Dodawanie wpisów serwisowych (data, przebieg, koszt, typ),
+              przegląd wpisów dla wybranego pojazdu, sumowanie kosztów.
+            </p>
+            <span class="status">Do zrobienia</span>
+          </div>
+
+          <div class="roadmap-item todo">
+            <h3>6. Moduł tankowań</h3>
+            <p>
+              Rejestrowanie tankowań wraz z przebiegiem i ceną paliwa;
+              wyliczanie średniego spalania i kosztu przejazdu.
+            </p>
+            <span class="status">Do zrobienia</span>
+          </div>
+
+          <div class="roadmap-item planned">
+            <h3>7. Przypomnienia</h3>
+            <p>
+              Definiowanie przypomnień po dacie i/lub przebiegu oraz oznaczanie
+              ich jako wykonane.
+            </p>
+            <span class="status">Planowane</span>
+          </div>
+
+          <div class="roadmap-item planned">
+            <h3>8. Wdrożenie</h3>
+            <p>
+              Publikacja aplikacji na darmowym hostingu oraz podłączenie bazy
+              PostgreSQL w chmurze.
+            </p>
+            <span class="status">Planowane</span>
+          </div>
+        </div>
+
+        <p class="gallery-lead">Dalszy rozwój</p>
+        <ul class="feature-list">
+          <li>Widok podsumowania kosztów dla wybranego pojazdu</li>
+          <li>Eksport danych (CSV / PDF)</li>
+          <li>Obsługa kilku użytkowników w ramach jednego pojazdu</li>
+          <li>Dodanie funkcji dla mechaników</li>
+        </ul>
+        <p class="gallery-lead">
+          Repozytorium zostanie upublicznione po zakończeniu etapu
+          uwierzytelniania
+        </p>
+
+        <div class="project-links">
+          <a
+            href="https://github.com/mareksigmund/AutoLogix"
+            target="_blank"
+            class="btn github-btn is-disabled"
+          >
+            <svg
+              class="github-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              width="20"
+              height="20"
+            >
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.08-2.7-1.08-.36-.91-.88-1.15-.88-1.15-.72-.5.06-.49.06-.49.8.06 1.22.83 1.22.83.71 1.21 1.86.86 2.31.66.07-.52.28-.86.5-1.06-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.58.82-2.14-.08-.2-.36-1.01.08-2.1 0 0 .67-.21 2.2.82A7.63 7.63 0 018 4.59a7.6 7.6 0 012 .27c1.53-1.03 2.2-.82 2.2-.82.44 1.09.16 1.9.08 2.1.51.56.82 1.27.82 2.14 0 3.07-1.87 3.75-3.65 3.95.28.24.53.73.53 1.48v2.2c0 .21.15.46.55.38A8 8 0 0016 8c0-4.42-3.58-8-8-8z"
+              />
+            </svg>
+            Zobacz kod na GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <p class="footer-name">© 2025 Marek Sigmund</p>
+        <p class="footer-tagline">Stworzone z pasją i odrobiną kawy ☕</p>
+        <div class="footer-links">
+          <a href="../assets/cv/CV_Marek.pdf" target="_blank">CV</a>
+          <a href="https://github.com/mareksigmund/Projekty" target="_blank"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/marek-sigmund-235164357"
+            target="_blank"
+            >LinkedIn</a
+          >
+          <a href="mailto:m.sigmund@o2.pl">E-mail</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

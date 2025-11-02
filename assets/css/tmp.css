@@ -1,0 +1,86 @@
+.wip-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(250, 204, 21, 0.12);
+  border: 1px solid rgba(250, 204, 21, 0.4);
+  color: #92400e;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  margin: 1.5rem 0;
+  font-weight: 600;
+}
+
+.wip-dot {
+  width: 10px;
+  height: 10px;
+  background: #f97316;
+  border-radius: 9999px;
+}
+
+.roadmap {
+  display: grid;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.roadmap-item {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  border-left: 4px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+}
+
+.roadmap-item h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.roadmap-item .status {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.roadmap-item.done {
+  border-left-color: #22c55e;
+}
+.roadmap-item.in-progress {
+  border-left-color: #f97316;
+}
+.roadmap-item.todo {
+  border-left-color: #0ea5e9;
+}
+.roadmap-item.planned {
+  border-left-color: #6366f1;
+}
+
+@media (max-width: 768px) {
+  .o-projekcie-grid {
+    display: block;
+  }
+  .roadmap {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Disabled / inactive button */
+.btn.is-disabled,
+.btn.disabled {
+  background: #f3f4f6; /* jasne tło */
+  color: #9ca3af; /* wyszarzony tekst */
+  border: 1px solid #e5e7eb; /* delikatna ramka */
+  pointer-events: none; /* wyłącza kliknięcia */
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.98;
+  text-decoration: none;
+}
+
+.btn.is-disabled .github-icon,
+.btn.disabled .github-icon {
+  opacity: 0.6;
+  fill: currentColor; /* ikonka dopasowana do koloru tekstu */
+}
