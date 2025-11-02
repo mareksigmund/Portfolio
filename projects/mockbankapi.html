@@ -1,23 +1,65 @@
 <!DOCTYPE html>
 <html lang="pl">
   <head>
+    <!-- Ustawienia podstawowe -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MockBank API – Projekt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- Twoje style -->
-    <link rel="stylesheet" href="../assets/css/style_app.css" />
-    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- Tytuł i opis -->
+    <title>MockBank API – NestJS + MongoDB Sandbox | Marek Sigmund</title>
+    <meta
+      name="description"
+      content="MockBank API to serwis bankowy typu sandbox zbudowany w NestJS + MongoDB. Obsługuje konta, transakcje, webhooki HMAC i integracje z zewnętrznymi aplikacjami (m.in. Budżetownik)."
+    />
 
+    <!-- SEO / Open Graph -->
+    <meta
+      property="og:title"
+      content="MockBank API – NestJS + MongoDB Sandbox"
+    />
+    <meta
+      property="og:description"
+      content="Serwis bankowy typu sandbox do testowania integracji. Zbudowany w NestJS + MongoDB z obsługą webhooków HMAC, JWT i Docker wdrożeniem na Render."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://mareksigmund.github.io/projects/mockbankapi.html"
+    />
+    <meta property="og:image" content="../assets/icon/og-mockbankapi.png" />
+
+    <!-- Favicon i ikony -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/icon/ms-favicon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/icon/ms-favicon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/icon/ms-favicon.png"
+    />
+
+    <!-- Czcionki i style -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <meta
-      name="description"
-      content="MockBank API: NestJS + MongoDB. Konta, transakcje, webhooki HMAC, endpoint integracyjny dla Budżetownika. Wdrożenie na Render (free tier – cold start możliwy)."
-    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/style_app.css" />
+
+    <!-- Kolor motywu -->
+    <meta name="theme-color" content="#1e3a8a" />
   </head>
+
   <body>
     <section class="project-page">
       <div class="container">
