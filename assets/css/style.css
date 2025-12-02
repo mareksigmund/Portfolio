@@ -1136,10 +1136,6 @@ footer {
   white-space: pre-line;
 }
 
-.hero .container {
-  position: relative;
-}
-
 .lang-switch {
   position: absolute;
   right: 40px;
