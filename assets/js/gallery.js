@@ -1,11 +1,19 @@
 function setMainImage(img) {
   const main = document.getElementById("main-image");
   const caption = document.getElementById("image-caption");
+  const captionText = img.alt || "Podgląd widoku";
+  const match = captionText.match(/^(.*)\s(\([^()]+\))$/);
+
   main.style.opacity = 0;
   setTimeout(() => {
     main.src = img.src;
     main.alt = img.alt;
-    caption.textContent = img.alt || "Podgląd widoku";
+    if (match) {
+      caption.textContent = "";
+      caption.append(match[1], document.createElement("br"), match[2]);
+    } else {
+      caption.textContent = captionText;
+    }
     main.style.opacity = 1;
   }, 100);
 
