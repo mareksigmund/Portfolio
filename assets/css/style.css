@@ -43,6 +43,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .cta .btn {
@@ -52,8 +53,10 @@ body {
   background: #111;
   color: #fff;
   text-decoration: none;
-  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 0.25s ease, color 0.25s ease,
+    box-shadow 0.25s ease, transform 0.25s ease;
   cursor: pointer;
+  min-width: 170px;
 }
 
 .cta .btn.outline {
@@ -61,18 +64,22 @@ body {
   color: #111;
 }
 
-.cta:hover .btn {
+.cta .btn:hover,
+.cta .btn:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.cta .btn:not(.outline):hover,
+.cta .btn:not(.outline):focus-visible {
   background: #fff;
   color: #111;
 }
 
-.cta:hover .btn.outline {
+.cta .btn.outline:hover,
+.cta .btn.outline:focus-visible {
   background: #111;
   color: #fff;
-}
-.cta .btn:hover,
-.cta .btn.outline:hover {
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
 }
 
 /* About */
